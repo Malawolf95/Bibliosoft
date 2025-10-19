@@ -159,6 +159,8 @@ namespace Bibliosoft
             // Mostrar los resultados en el DataGridView
             if (prestamosEncontrados.Count > 0)
             {
+                messagealert.ForeColor = Color.Green;
+                message.Text = $"Préstamos encontrados para el usuario ID {idUsuario}.✅";
                 dataGridView2.DataSource = prestamosEncontrados;
             }
             else
