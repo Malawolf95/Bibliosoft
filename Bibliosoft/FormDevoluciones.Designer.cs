@@ -40,6 +40,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
+            this.comboBoxUser = new System.Windows.Forms.ComboBox();
+            this.comboBoxBook = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -179,6 +181,22 @@
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 9;
             // 
+            // comboBoxUser
+            // 
+            this.comboBoxUser.FormattingEnabled = true;
+            this.comboBoxUser.Location = new System.Drawing.Point(250, 49);
+            this.comboBoxUser.Name = "comboBoxUser";
+            this.comboBoxUser.Size = new System.Drawing.Size(177, 24);
+            this.comboBoxUser.TabIndex = 10;
+            // 
+            // comboBoxBook
+            // 
+            this.comboBoxBook.FormattingEnabled = true;
+            this.comboBoxBook.Location = new System.Drawing.Point(485, 49);
+            this.comboBoxBook.Name = "comboBoxBook";
+            this.comboBoxBook.Size = new System.Drawing.Size(177, 24);
+            this.comboBoxBook.TabIndex = 11;
+            // 
             // FormDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -187,6 +205,8 @@
             this.BackgroundImage = global::Bibliosoft.Properties.Resources.Captura_de_pantalla_2025_10_16_124301;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1374, 865);
+            this.Controls.Add(this.comboBoxBook);
+            this.Controls.Add(this.comboBoxUser);
             this.Controls.Add(this.message);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
@@ -218,5 +238,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label messagealert;
         private System.Windows.Forms.Label message;
+        private System.Windows.Forms.ComboBox comboBoxUser;
+        private System.Windows.Forms.ComboBox comboBoxBook;
     }
 }

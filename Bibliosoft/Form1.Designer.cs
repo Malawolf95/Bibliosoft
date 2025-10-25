@@ -34,6 +34,7 @@
             this.buttonPrestamos = new System.Windows.Forms.Button();
             this.buttonDevoluciones = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.botonMultas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +70,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(520, 298);
+            this.button2.Location = new System.Drawing.Point(520, 292);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(240, 51);
             this.button2.TabIndex = 3;
@@ -83,7 +84,7 @@
             this.buttonPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrestamos.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrestamos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPrestamos.Location = new System.Drawing.Point(520, 373);
+            this.buttonPrestamos.Location = new System.Drawing.Point(520, 368);
             this.buttonPrestamos.Name = "buttonPrestamos";
             this.buttonPrestamos.Size = new System.Drawing.Size(240, 51);
             this.buttonPrestamos.TabIndex = 4;
@@ -97,7 +98,7 @@
             this.buttonDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDevoluciones.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDevoluciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDevoluciones.Location = new System.Drawing.Point(520, 449);
+            this.buttonDevoluciones.Location = new System.Drawing.Point(520, 443);
             this.buttonDevoluciones.Name = "buttonDevoluciones";
             this.buttonDevoluciones.Size = new System.Drawing.Size(240, 51);
             this.buttonDevoluciones.TabIndex = 5;
@@ -117,6 +118,20 @@
             this.label2.Text = "Miguel Ángel Henao, Catalina Carrasquilla  - Bibliosoft | Todos los derechos rese" +
     "ervados 2025©.";
             // 
+            // botonMultas
+            // 
+            this.botonMultas.BackColor = System.Drawing.Color.MediumPurple;
+            this.botonMultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonMultas.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonMultas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.botonMultas.Location = new System.Drawing.Point(520, 517);
+            this.botonMultas.Name = "botonMultas";
+            this.botonMultas.Size = new System.Drawing.Size(240, 51);
+            this.botonMultas.TabIndex = 7;
+            this.botonMultas.Text = "MULTAS";
+            this.botonMultas.UseVisualStyleBackColor = false;
+            this.botonMultas.Click += new System.EventHandler(this.botonMultas_Click);
+            // 
             // FormInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,6 +140,7 @@
             this.BackgroundImage = global::Bibliosoft.Properties.Resources.Captura_de_pantalla_2025_10_16_121910;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(908, 633);
+            this.Controls.Add(this.botonMultas);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.buttonDevoluciones);
             this.Controls.Add(this.buttonPrestamos);
@@ -148,6 +164,7 @@
         private System.Windows.Forms.Button buttonPrestamos;
         private System.Windows.Forms.Button buttonDevoluciones;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button botonMultas;
     }
 }
 

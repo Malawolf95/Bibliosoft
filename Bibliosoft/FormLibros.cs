@@ -37,12 +37,13 @@ namespace Bibliosoft
 
         private void buttonVolverLibros_Click(object sender, EventArgs e)
         {
-            
+            Animaciones.SlideOut(this, "right");
 
             Form vover = new FormInicio();
             
             
             vover.Show();
+            Animaciones.SlideIn(vover, "left");
             this.Close();
         }
 

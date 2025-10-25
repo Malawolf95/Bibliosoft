@@ -8,20 +8,20 @@ namespace Bibliosoft
 {
     public class Devoluciones
     {
-        public int idbook { get; set; }
-        public string title { get; set; }
+        public int id_usuario { get; set; }
+        public int id_libro { get; set; }
 
-        public int available { get; set; }
+        public int DiasPrestado { get; set; }
 
         public Devoluciones()
         {
         }
 
-        public Devoluciones(int idbook, string title, int available)
+        public Devoluciones(int id_usuario, int id_libro, int DiasPrestado)
         {
-            this.idbook = idbook;
-            this.title = title;
-            this.available = available;
+            this.id_usuario = id_usuario;
+            this.id_libro = id_libro;
+            this.DiasPrestado = DiasPrestado;
         }
 
 

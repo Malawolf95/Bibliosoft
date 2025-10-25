@@ -12,6 +12,8 @@ namespace Bibliosoft
 {
     public partial class FormInicio : Form
     {
+        private Timer slideTimer;
+        private bool isCollapsed = true;
         public FormInicio()
         {
             InitializeComponent();
@@ -53,8 +55,20 @@ namespace Bibliosoft
         {
 
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonMultas_Click(object sender, EventArgs e)
+        {
+            Form Multas = new FormMultas();
+            Multas.Show();
+            this.Hide();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
 
         }

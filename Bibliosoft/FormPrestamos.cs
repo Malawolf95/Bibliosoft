@@ -14,6 +14,7 @@ namespace Bibliosoft
 {
     public partial class FormPrestamos : Form
     {
+        List<Prestamo> prestamos = new List<Prestamo>();
         Dbcrud db = new Dbcrud();
         
         string ConexionBD = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BibliosoftV3;Integrated Security=True";
@@ -28,11 +29,12 @@ namespace Bibliosoft
 
         private void buttonVolverPrest_Click(object sender, EventArgs e)
         {
-            
+            Animaciones.SlideOut(this, "right");
             Form volver = new FormInicio();
             
 
             volver.Show();
+            Animaciones.SlideIn(volver, "left");
             this.Close();
         }
         private void LoadPrestamos()
@@ -66,12 +68,52 @@ namespace Bibliosoft
         {
             
             LoadPrestamos();
+            CargarUsuarios();
+            CargarLibros();
             // Cambiar los nombres de columnas predeterminadas por unas personalizadas
             dataGridView2.Columns["id_usuario"].HeaderText = "Id de Usuario";
             dataGridView2.Columns["id_libro"].HeaderText = "Id de Libro";
             dataGridView2.Columns["DiasPrestar"].HeaderText = "Dias Prestado";
             // Enviar el foco (punto de inserción) al txtIdBook
             txtIdUser.Focus();
+        }
+        private void CargarUsuarios()
+        {
+   
+                using (SqlConnection conn = new SqlConnection(ConexionBD))
+                {
+                    conn.Open();
+
+                    string query = "SELECT id_usuario, nombreCompleto FROM Usuario WHERE estaMultado = 0";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    comboBoxUsers.DataSource = dt;
+                    comboBoxUsers.DisplayMember = "nombreCompleto"; // lo que el usuario ve
+                    comboBoxUsers.ValueMember = "id_usuario";       // el valor real
+                    comboBoxUsers.SelectedIndex = -1;               // que aparezca vacío al inicio
+                }   
+            
+        }
+        private void CargarLibros()
+        {
+            
+                using (SqlConnection conn = new SqlConnection(ConexionBD))
+                {
+                    conn.Open();
+
+                    string query = "SELECT id_libro, titulo FROM Libro WHERE disponibilidad = 1";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    comboBoxBooks.DataSource = dt;
+                    comboBoxBooks.DisplayMember = "titulo"; // lo que el usuario ve
+                    comboBoxBooks.ValueMember = "id_libro"; // el valor real
+                    comboBoxBooks.SelectedIndex = -1;
+                }
+ 
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -104,8 +146,47 @@ namespace Bibliosoft
             }
         }
 
-        private void buttonAgregarUsuarioPrestamo_Click(object sender, EventArgs e)
+        /*private void buttonAgregarUsuarioPrestamo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int idUsuario = int.Parse(txtIdUser.Text);
+                int idLibro = int.Parse(txtIdBook.Text);
+                int diasprestar = (int)numericUpDown1.Value;
+
+                using (SqlConnection conn = new SqlConnection(ConexionBD))
+                {
+                    conn.Open();
+
+                    // 1️⃣ Verificar si el usuario está multado
+                    string queryCheck = "SELECT estaMultado FROM Usuario WHERE id_usuario = @id_usuario";
+                    SqlCommand cmdCheck = new SqlCommand(queryCheck, conn);
+                    cmdCheck.Parameters.AddWithValue("@id_usuario", idUsuario);
+                    bool estaMultado = Convert.ToBoolean(cmdCheck.ExecuteScalar());
+
+                    if (estaMultado)
+                    {
+                        MessageBox.Show("⚠️ El usuario está multado y no puede realizar préstamos hasta ser habilitado.");
+                        return;
+                    }
+
+                    // 2️⃣ Registrar el préstamo
+                    string query = "INSERT INTO Prestamo (id_usuario, id_libro, DiasPrestar) VALUES (@id_usuario, @id_libro, @DiasPrestar)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@id_libro", idLibro);
+                    cmd.Parameters.AddWithValue("@DiasPrestar", diasprestar);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("✅ Préstamo registrado correctamente.");
+                }
+
+                LoadPrestamos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar préstamo: {ex.Message}");
+            }
             string idUser = txtIdUser.Text;
             string idBook = txtIdBook.Text;
             int diasPrestar = (int)numericUpDown1.Value;
@@ -125,6 +206,42 @@ namespace Bibliosoft
             message.ForeColor = Color.Green;
             message.Text = "Prestamo agregado CORRECTAMENTE...✅";
             LoadPrestamos();
+        }*/
+        private void buttonAgregarUsuarioPrestamo_Click(object sender, EventArgs e)
+        {
+            if (comboBoxUsers.SelectedValue == null || comboBoxBooks.SelectedValue == null)
+            {
+                messagee.ForeColor= Color.Red;
+                messagee.Text = "⚠️ Debe seleccionar un usuario y un libro.";
+                
+                return;
+            }
+
+            int idUsuario = Convert.ToInt32(comboBoxUsers.SelectedValue);
+            int idLibro = Convert.ToInt32(comboBoxBooks.SelectedValue);
+            int diasPrestar = Convert.ToInt32(numericUpDown1.Value); // si usas un NumericUpDown
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConexionBD))
+                {
+                    conn.Open();
+
+                    string query = "INSERT INTO Prestamo (id_usuario, id_libro, DiasPrestar) VALUES (@id_usuario, @id_libro, @DiasPrestar)";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
+                    cmd.Parameters.AddWithValue("@id_libro", idLibro);
+                    cmd.Parameters.AddWithValue("@DiasPrestar", diasPrestar);
+
+                    cmd.ExecuteNonQuery();
+                }
+                messagee.ForeColor = Color.Green;
+                messagee.Text = "✅ Préstamo registrado correctamente. ✅";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al registrar el préstamo: " + ex.Message);
+            }
         }
         private void dataGridView2_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -177,7 +294,40 @@ namespace Bibliosoft
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (txtIdUser.Text != "")
+            {
+                // Buscar primero el libro con el id ingresado
+                prestamos = db.GetPrestamos(int.Parse(txtIdUser.Text));
 
+
+                if (prestamos.Count > 0) // Si existe el libro
+                {
+                    string idUserToDelete = txtIdUser.Text;
+
+                    // Llamamos al método de la clase dbCrud para eliminarlo
+                    db.DeletePrestamo(idUserToDelete);
+
+                    message.ForeColor = Color.Green;
+                    message.Text = $"Prestamo con id de usuario {idUserToDelete}, eliminado correctamente ✅";
+
+                    // Recargamos la lista de libros en la vista
+                    LoadPrestamos();
+
+                    // Limpiamos los controles
+                    txtIdUser.Clear();
+                    txtIdBook.Clear();
+                    numericUpDown1.Value=0;
+                }
+                else
+                {
+                    message.ForeColor = Color.Red;
+                    message.Text = $"⚠️ El id de usuario: {txtIdUser.Text} NO existe. Inténtelo con otro ⚠️";
+                }
+            }
+            else
+            {
+                MessageBox.Show("⚠️Debe ingresar el id del usuario para eliminar prestamo ⚠️");
+            }
         }
     }
 }

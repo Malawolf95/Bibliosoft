@@ -45,6 +45,9 @@
             this.messageIdBook = new System.Windows.Forms.Label();
             this.messagealert = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.comboBoxUsers = new System.Windows.Forms.ComboBox();
+            this.comboBoxBooks = new System.Windows.Forms.ComboBox();
+            this.messagee = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -96,9 +99,9 @@
             this.label2.ForeColor = System.Drawing.Color.MediumPurple;
             this.label2.Location = new System.Drawing.Point(799, 195);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 19);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Id del Usuario";
+            this.label2.Text = "Usuario";
             // 
             // label3
             // 
@@ -108,9 +111,9 @@
             this.label3.ForeColor = System.Drawing.Color.MediumPurple;
             this.label3.Location = new System.Drawing.Point(799, 273);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 19);
+            this.label3.Size = new System.Drawing.Size(47, 19);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Id del Libro";
+            this.label3.Text = "Libro";
             // 
             // label4
             // 
@@ -126,7 +129,7 @@
             // 
             // txtIdUser
             // 
-            this.txtIdUser.Location = new System.Drawing.Point(802, 228);
+            this.txtIdUser.Location = new System.Drawing.Point(-275, 252);
             this.txtIdUser.Name = "txtIdUser";
             this.txtIdUser.Size = new System.Drawing.Size(286, 22);
             this.txtIdUser.TabIndex = 8;
@@ -135,7 +138,7 @@
             // 
             // txtIdBook
             // 
-            this.txtIdBook.Location = new System.Drawing.Point(803, 306);
+            this.txtIdBook.Location = new System.Drawing.Point(-274, 280);
             this.txtIdBook.Name = "txtIdBook";
             this.txtIdBook.Size = new System.Drawing.Size(285, 22);
             this.txtIdBook.TabIndex = 9;
@@ -239,6 +242,31 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // comboBoxUsers
+            // 
+            this.comboBoxUsers.FormattingEnabled = true;
+            this.comboBoxUsers.Location = new System.Drawing.Point(803, 228);
+            this.comboBoxUsers.Name = "comboBoxUsers";
+            this.comboBoxUsers.Size = new System.Drawing.Size(176, 24);
+            this.comboBoxUsers.TabIndex = 19;
+            // 
+            // comboBoxBooks
+            // 
+            this.comboBoxBooks.FormattingEnabled = true;
+            this.comboBoxBooks.Location = new System.Drawing.Point(804, 304);
+            this.comboBoxBooks.Name = "comboBoxBooks";
+            this.comboBoxBooks.Size = new System.Drawing.Size(175, 24);
+            this.comboBoxBooks.TabIndex = 20;
+            // 
+            // messagee
+            // 
+            this.messagee.AutoSize = true;
+            this.messagee.BackColor = System.Drawing.Color.Transparent;
+            this.messagee.Location = new System.Drawing.Point(740, 142);
+            this.messagee.Name = "messagee";
+            this.messagee.Size = new System.Drawing.Size(0, 16);
+            this.messagee.TabIndex = 21;
+            // 
             // FormPrestamos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -246,6 +274,9 @@
             this.BackgroundImage = global::Bibliosoft.Properties.Resources.Captura_de_pantalla_2025_10_16_123340;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1323, 901);
+            this.Controls.Add(this.messagee);
+            this.Controls.Add(this.comboBoxBooks);
+            this.Controls.Add(this.comboBoxUsers);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.messagealert);
             this.Controls.Add(this.messageIdBook);
@@ -293,5 +324,8 @@
         private System.Windows.Forms.Label messageIdBook;
         private System.Windows.Forms.Label messagealert;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox comboBoxUsers;
+        private System.Windows.Forms.ComboBox comboBoxBooks;
+        private System.Windows.Forms.Label messagee;
     }
 }

@@ -62,6 +62,9 @@ namespace Bibliosoft
             return books;
 
         }
+        
+        
+
         public List<Prestamo> BuscarPrestamoPorUsuario(int idUsuario)
         {
             List<Prestamo> prestamos = new List<Prestamo>();
@@ -135,17 +138,24 @@ namespace Bibliosoft
                 // abrir la conexión 
                 conn.Open();
                 // Generar un objeto para realizar comandos de sql
-                SqlCommand cmd = new SqlCommand("Select id_usuario, nombreCompleto, telefono From Usuario", conn);
+                SqlCommand cmd = new SqlCommand("Select id_usuario, nombreCompleto, telefono, EstaMultado From Usuario", conn);
                 // Ejecutar la instrucción contenida en el objeto cmd
                 SqlDataReader rdr = cmd.ExecuteReader();
                 // Recorrer el contenido de la vble rdr
                 // para agregar cada usuario en lista
                 while (rdr.Read())
                 {
+                    bool estaMultado = false; // valor por defecto
+                    if (rdr["EstaMultado"] != DBNull.Value)
+                    {
+                        estaMultado = Convert.ToBoolean(rdr["EstaMultado"]);
+                    }
+
                     users.Add(new Usuarios(
-                    Convert.ToInt32(rdr["id_usuario"]),         
+                    Convert.ToInt32(rdr["id_usuario"]),
                     rdr["nombreCompleto"].ToString(),
-                    rdr["telefono"].ToString()
+                    rdr["telefono"].ToString(),
+                    estaMultado
                 ));
                 }
             }
@@ -221,10 +231,17 @@ namespace Bibliosoft
 
         while (dr.Read())
         {
-            Usuarios u = new Usuarios(
+                    bool EstaMultado = false;
+                    if (dr["EstaMultado"] != DBNull.Value)
+                    {
+                        EstaMultado = Convert.ToBoolean(dr["EstaMultado"]);
+                    }
+                        
+                Usuarios u = new Usuarios(
                 Convert.ToInt32(dr["id_usuario"]),
-                dr["NombreCompleto"].ToString(),
-                dr["telefono"].ToString()
+                dr["nombreCompleto"].ToString(),
+                dr["telefono"].ToString(),
+                EstaMultado
             );
             lista.Add(u);
         }
@@ -248,7 +265,7 @@ namespace Bibliosoft
 
             }
         }
-        public void DeleteUser(string iduser)
+        public void DeleteUser(int iduser)
         {
             using (SqlConnection conn = new SqlConnection(ConexionBD))
             {
@@ -339,6 +356,16 @@ namespace Bibliosoft
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("DELETE FROM Libro WHERE id_libro = @id", conn);
                 cmd.Parameters.AddWithValue("@id", idbook);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public void DeletePrestamo(string iduser)
+        {
+            using (SqlConnection conn = new SqlConnection(ConexionBD))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM Prestamo WHERE id_usuario = @id", conn);
+                cmd.Parameters.AddWithValue("@id", iduser);
                 cmd.ExecuteNonQuery();
             }
         }

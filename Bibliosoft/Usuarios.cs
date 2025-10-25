@@ -17,15 +17,18 @@ namespace Bibliosoft
 
         public string telefono { get; set; }
 
+        public bool EstaMultado { get; set; }
+
         public Usuarios()
         {
         }
 
-        public Usuarios(int id_usuario, string nombreCompleto, string telefono)
+        public Usuarios(int id_usuario, string nombreCompleto, string telefono, bool estaMultado=false)
         {
             this.id_usuario = id_usuario;
             this.nombreCompleto = nombreCompleto;
             this.telefono = telefono;
+            this.EstaMultado = estaMultado;
         }
     }
 }

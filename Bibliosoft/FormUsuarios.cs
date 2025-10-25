@@ -55,11 +55,12 @@ namespace Bibliosoft
 
         private void buttonVolver1_Click(object sender, EventArgs e)
         {
-            
+            Animaciones.SlideOut(this, "right");
             Form volver = new FormInicio();
 
             
             volver.Show();
+            Animaciones.SlideIn(volver, "left");
             this.Close();
             
         }
@@ -115,6 +116,7 @@ namespace Bibliosoft
                 string.IsNullOrWhiteSpace(textPhone.Text))
 
             {
+                
                 MessageBox.Show("⚠️ Por favor, complete todos los campos antes de agregar el usuario. ⚠️",
                                 "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -123,8 +125,9 @@ namespace Bibliosoft
             string iduser = textIdUser.Text;
             string nombre = textName.Text;
             string telefono = textPhone.Text;
+            bool EstaMultado = false;
             // Crear objeto de la clase Book con el método constructor que tiene todos los atributos
-            Usuarios newUser = new Usuarios(int.Parse(iduser), nombre, (telefono));
+            Usuarios newUser = new Usuarios(int.Parse(iduser), nombre, (telefono),Convert.ToBoolean(EstaMultado));
             // Mandar a guardar a través del metodo AddBook de la clase dbCrud
             db.AddUsers(newUser);
             message.ForeColor = Color.Green;
@@ -173,37 +176,43 @@ namespace Bibliosoft
         {
             if (textIdUser.Text != "")
             {
-                // Buscar primero el libro con el id ingresado
+                
+                // Buscar primero el usuario con el id ingresado
                 usuarios = db.getUserxId(int.Parse(textIdUser.Text));
 
 
-                if (usuarios.Count > 0) // Si existe el libro
+                if (usuarios.Count > 0) // Si existe el usuario
                 {
-                    string idUserToDelete = textIdUser.Text;
+                    int idUserToDelete = int.Parse(textIdUser.Text);
+                    DialogResult result = MessageBox.Show(
+                    $"¿Seguro que deseas eliminar el usuario con ID {idUserToDelete}?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                    );
 
-                    // Llamamos al método de la clase dbCrud para eliminarlo
-                    db.DeleteBook(idUserToDelete);
-
-                    message.ForeColor = Color.Green;
-                    message.Text = $"Usuario con id {idUserToDelete}, eliminado correctamente ✅";
-
-                    // Recargamos la lista de libros en la vista
-                    LoadUsers();
-
-                    // Limpiamos los controles
-                    textIdUser.Clear();
-                    textName.Clear();
-                    textPhone.Clear();
-                }
-                else
-                {
+                    if (result == DialogResult.Yes)
+                    {
+                        
+                            db.DeleteUser(idUserToDelete);
+                            message.ForeColor = Color.Green;
+                            message.Text = $"Usuario con ID {idUserToDelete} eliminado correctamente.";
+                            LoadUsers(); // refresca el DataGridView
+                            textIdUser.Clear();
+                            textName.Clear();
+                            textPhone.Clear();
+                        }
+                        
+                    }
+                    else
+                    {
                     message.ForeColor = Color.Red;
-                    message.Text = $"⚠️ El id de usuario: {textIdUser.Text} NO existe. Inténtelo con otro ⚠️";
-                }
+                    message.Text = "⚠️ Por favor ingrese o un ID de usuario. ⚠️";
+                    }
             }
             else
             {
-                MessageBox.Show("⚠️Debe ingresar el id del usuario a eliminar ⚠️");
+                MessageBox.Show("⚠️ Debe ingresar el id del usuario a eliminar ⚠️");
             }
         }
 
