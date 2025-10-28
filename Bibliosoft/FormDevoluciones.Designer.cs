@@ -34,14 +34,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBoxBook = new System.Windows.Forms.ComboBox();
             this.messagealert = new System.Windows.Forms.Label();
+            this.comboBoxUser = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.message = new System.Windows.Forms.Label();
-            this.comboBoxUser = new System.Windows.Forms.ComboBox();
-            this.comboBoxBook = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolverDev.Location = new System.Drawing.Point(926, 715);
+            this.buttonVolverDev.Location = new System.Drawing.Point(318, 714);
             this.buttonVolverDev.Name = "buttonVolverDev";
             this.buttonVolverDev.Size = new System.Drawing.Size(205, 33);
             this.buttonVolverDev.TabIndex = 1;
@@ -68,9 +68,9 @@
             this.label2.ForeColor = System.Drawing.Color.MediumPurple;
             this.label2.Location = new System.Drawing.Point(57, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 19);
+            this.label2.Size = new System.Drawing.Size(80, 19);
             this.label2.TabIndex = 3;
-            this.label2.Text = "ID DEL USUARIO";
+            this.label2.Text = "USUARIO";
             // 
             // label3
             // 
@@ -80,9 +80,9 @@
             this.label3.ForeColor = System.Drawing.Color.MediumPurple;
             this.label3.Location = new System.Drawing.Point(57, 125);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 19);
+            this.label3.Size = new System.Drawing.Size(54, 19);
             this.label3.TabIndex = 4;
-            this.label3.Text = "ID DEL LIBRO";
+            this.label3.Text = "LIBRO";
             // 
             // label4
             // 
@@ -102,7 +102,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(386, 601);
+            this.button1.Location = new System.Drawing.Point(432, 633);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(634, 36);
             this.button1.TabIndex = 6;
@@ -113,18 +113,26 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.comboBoxBook);
             this.groupBox1.Controls.Add(this.messagealert);
+            this.groupBox1.Controls.Add(this.comboBoxUser);
             this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(386, 283);
+            this.groupBox1.Location = new System.Drawing.Point(432, 296);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(634, 312);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
+            // 
+            // comboBoxBook
+            // 
+            this.comboBoxBook.FormattingEnabled = true;
+            this.comboBoxBook.Location = new System.Drawing.Point(61, 157);
+            this.comboBoxBook.Name = "comboBoxBook";
+            this.comboBoxBook.Size = new System.Drawing.Size(177, 24);
+            this.comboBoxBook.TabIndex = 11;
             // 
             // messagealert
             // 
@@ -133,6 +141,14 @@
             this.messagealert.Name = "messagealert";
             this.messagealert.Size = new System.Drawing.Size(0, 16);
             this.messagealert.TabIndex = 6;
+            // 
+            // comboBoxUser
+            // 
+            this.comboBoxUser.FormattingEnabled = true;
+            this.comboBoxUser.Location = new System.Drawing.Point(61, 81);
+            this.comboBoxUser.Name = "comboBoxUser";
+            this.comboBoxUser.Size = new System.Drawing.Size(177, 24);
+            this.comboBoxUser.TabIndex = 10;
             // 
             // numericUpDown1
             // 
@@ -144,7 +160,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(61, 157);
+            this.textBox2.Location = new System.Drawing.Point(-161, 209);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(177, 22);
             this.textBox2.TabIndex = 1;
@@ -152,7 +168,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(61, 86);
+            this.textBox1.Location = new System.Drawing.Point(-161, 171);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(177, 22);
             this.textBox1.TabIndex = 0;
@@ -164,7 +180,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(492, 129);
+            this.label1.Location = new System.Drawing.Point(553, 129);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
             this.label1.Size = new System.Drawing.Size(416, 64);
@@ -181,37 +197,21 @@
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 9;
             // 
-            // comboBoxUser
-            // 
-            this.comboBoxUser.FormattingEnabled = true;
-            this.comboBoxUser.Location = new System.Drawing.Point(250, 49);
-            this.comboBoxUser.Name = "comboBoxUser";
-            this.comboBoxUser.Size = new System.Drawing.Size(177, 24);
-            this.comboBoxUser.TabIndex = 10;
-            // 
-            // comboBoxBook
-            // 
-            this.comboBoxBook.FormattingEnabled = true;
-            this.comboBoxBook.Location = new System.Drawing.Point(485, 49);
-            this.comboBoxBook.Name = "comboBoxBook";
-            this.comboBoxBook.Size = new System.Drawing.Size(177, 24);
-            this.comboBoxBook.TabIndex = 11;
-            // 
             // FormDevoluciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.BackgroundImage = global::Bibliosoft.Properties.Resources.Captura_de_pantalla_2025_10_16_124301;
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1374, 865);
-            this.Controls.Add(this.comboBoxBook);
-            this.Controls.Add(this.comboBoxUser);
+            this.ClientSize = new System.Drawing.Size(1518, 977);
             this.Controls.Add(this.message);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.buttonVolverDev);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.textBox1);
             this.DoubleBuffered = true;
             this.Name = "FormDevoluciones";
             this.Text = "DEVOLUCIONES🔄";

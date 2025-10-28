@@ -45,26 +45,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(611, 164);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(603, 226);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(183, 64);
+            this.label1.Size = new System.Drawing.Size(310, 78);
             this.label1.TabIndex = 9;
-            this.label1.Text = "MULTAS";
+            this.label1.Text = "SANCIONES";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonVolverDev
             // 
-            this.buttonVolverDev.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonVolverDev.BackColor = System.Drawing.Color.Transparent;
+            this.buttonVolverDev.FlatAppearance.BorderSize = 0;
             this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonVolverDev.Location = new System.Drawing.Point(933, 657);
+            this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonVolverDev.Location = new System.Drawing.Point(297, 709);
             this.buttonVolverDev.Name = "buttonVolverDev";
             this.buttonVolverDev.Size = new System.Drawing.Size(205, 32);
             this.buttonVolverDev.TabIndex = 10;
-            this.buttonVolverDev.Text = "↩️ Volver";
+            this.buttonVolverDev.Text = "< Volver al menú";
             this.buttonVolverDev.UseVisualStyleBackColor = false;
             this.buttonVolverDev.Click += new System.EventHandler(this.buttonVolverDev_Click);
             // 
@@ -73,45 +75,51 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(256, 266);
+            this.dataGridView1.Location = new System.Drawing.Point(338, 339);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(436, 442);
+            this.dataGridView1.Size = new System.Drawing.Size(461, 327);
             this.dataGridView1.TabIndex = 11;
             // 
             // buttonBuscarUsuario
             // 
-            this.buttonBuscarUsuario.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonBuscarUsuario.BackColor = System.Drawing.Color.IndianRed;
             this.buttonBuscarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBuscarUsuario.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuscarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonBuscarUsuario.Location = new System.Drawing.Point(727, 509);
+            this.buttonBuscarUsuario.Image = global::Bibliosoft.Properties.Resources.icons8_búsqueda_18;
+            this.buttonBuscarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBuscarUsuario.Location = new System.Drawing.Point(963, 503);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
-            this.buttonBuscarUsuario.Size = new System.Drawing.Size(350, 39);
+            this.buttonBuscarUsuario.Size = new System.Drawing.Size(221, 57);
             this.buttonBuscarUsuario.TabIndex = 23;
-            this.buttonBuscarUsuario.Text = "Buscar Usuario Multado";
+            this.buttonBuscarUsuario.Text = "Buscar Usuario ";
+            this.buttonBuscarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonBuscarUsuario.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumPurple;
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(727, 569);
+            this.button1.Image = global::Bibliosoft.Properties.Resources.icons8_basura_18;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(963, 578);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(350, 39);
+            this.button1.Size = new System.Drawing.Size(221, 57);
             this.button1.TabIndex = 24;
-            this.button1.Text = "Eliminar Multa";
+            this.button1.Text = "Eliminar Sanción";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(727, 340);
+            this.textBox1.Location = new System.Drawing.Point(963, 380);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 22);
+            this.textBox1.Size = new System.Drawing.Size(221, 22);
             this.textBox1.TabIndex = 25;
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -120,8 +128,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label2.Location = new System.Drawing.Point(723, 309);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(830, 380);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 26;
@@ -135,7 +143,7 @@
             // 
             this.message.AutoSize = true;
             this.message.BackColor = System.Drawing.Color.Transparent;
-            this.message.Location = new System.Drawing.Point(853, 311);
+            this.message.Location = new System.Drawing.Point(960, 351);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 27;
@@ -144,9 +152,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Bibliosoft.Properties.Resources.Captura_de_pantalla_2025_10_16_124301;
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1374, 865);
+            this.ClientSize = new System.Drawing.Size(1518, 977);
             this.Controls.Add(this.message);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);

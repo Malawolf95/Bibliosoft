@@ -36,10 +36,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(163, 125);
+            this.textBox1.Location = new System.Drawing.Point(245, 181);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(181, 22);
+            this.textBox1.Size = new System.Drawing.Size(163, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -48,31 +48,31 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label1.Location = new System.Drawing.Point(207, 45);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(272, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 31);
+            this.label1.Size = new System.Drawing.Size(111, 24);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Clave: ";
+            this.label1.Text = "Contraseña:";
             // 
             // message
             // 
             this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(160, 92);
+            this.message.Location = new System.Drawing.Point(242, 148);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 7;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.MediumPurple;
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(137, 185);
+            this.button1.Location = new System.Drawing.Point(219, 241);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(240, 51);
+            this.button1.Size = new System.Drawing.Size(222, 41);
             this.button1.TabIndex = 8;
             this.button1.Text = "INGRESAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -82,7 +82,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 248);
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(658, 397);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.message);
             this.Controls.Add(this.label1);

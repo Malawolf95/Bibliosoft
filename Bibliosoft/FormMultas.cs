@@ -103,5 +103,10 @@ namespace Bibliosoft
                 MessageBox.Show("Seleccione un usuario primero.");
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

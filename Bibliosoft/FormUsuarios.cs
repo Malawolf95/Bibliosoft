@@ -17,7 +17,7 @@ namespace Bibliosoft
               
         List<Usuarios> usuarios = new List<Usuarios>();  // lista para guardar los resultados de búsqueda
         string idUserFound = "";
-        private Dbcrud db = new Dbcrud();
+        private UsuariosDAO db = new UsuariosDAO();
 
         public FormUsuarios()
         {
@@ -25,7 +25,7 @@ namespace Bibliosoft
 
             this.StartPosition = FormStartPosition.CenterScreen;
             dgvBook.DataBindingComplete += dgvBook_DataBindingComplete;
-            db = new Dbcrud();
+            db = new UsuariosDAO();
             //MessageBox.Show("Conexión a la base de datos, EXITOSA");
             LoadUsers();
         }
@@ -71,7 +71,7 @@ namespace Bibliosoft
             {
                 messageNameUser.ForeColor = Color.Red;
                 messageNameUser.Text = $"⚠️ Debe ingresar solo letras ⚠️";
-                e.Handled = true;
+                
             }
             
         }
@@ -244,6 +244,11 @@ namespace Bibliosoft
             {
                 MessageBox.Show("Debe ingresar el id del usuario a buscar.");
             }
+        }
+
+        private void labelGestionarL_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

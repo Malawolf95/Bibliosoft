@@ -15,7 +15,7 @@ namespace Bibliosoft
     public partial class FormPrestamos : Form
     {
         List<Prestamo> prestamos = new List<Prestamo>();
-        Dbcrud db = new Dbcrud();
+        PrestamosDAO db = new PrestamosDAO();
         
         string ConexionBD = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BibliosoftV3;Integrated Security=True";
 
@@ -24,6 +24,7 @@ namespace Bibliosoft
         public FormPrestamos()
         {
             InitializeComponent();
+            LoadComboBox();
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -146,67 +147,41 @@ namespace Bibliosoft
             }
         }
 
-        /*private void buttonAgregarUsuarioPrestamo_Click(object sender, EventArgs e)
+       
+        private void LoadComboBox()
         {
-            try
+            // Limpiamos antes de cargar
+            comboBoxUsers.Items.Clear();
+            comboBoxBooks.Items.Clear();
+
+            // 🔹 Cargar usuarios
+            using (SqlConnection conn = new SqlConnection(ConexionBD))
             {
-                int idUsuario = int.Parse(txtIdUser.Text);
-                int idLibro = int.Parse(txtIdBook.Text);
-                int diasprestar = (int)numericUpDown1.Value;
+                conn.Open();
+                string queryUsers = "SELECT nombreCompleto FROM Usuario";
+                SqlCommand cmdUsers = new SqlCommand(queryUsers, conn);
+                SqlDataReader readerUsers = cmdUsers.ExecuteReader();
 
-                using (SqlConnection conn = new SqlConnection(ConexionBD))
+                while (readerUsers.Read())
                 {
-                    conn.Open();
-
-                    // 1️⃣ Verificar si el usuario está multado
-                    string queryCheck = "SELECT estaMultado FROM Usuario WHERE id_usuario = @id_usuario";
-                    SqlCommand cmdCheck = new SqlCommand(queryCheck, conn);
-                    cmdCheck.Parameters.AddWithValue("@id_usuario", idUsuario);
-                    bool estaMultado = Convert.ToBoolean(cmdCheck.ExecuteScalar());
-
-                    if (estaMultado)
-                    {
-                        MessageBox.Show("⚠️ El usuario está multado y no puede realizar préstamos hasta ser habilitado.");
-                        return;
-                    }
-
-                    // 2️⃣ Registrar el préstamo
-                    string query = "INSERT INTO Prestamo (id_usuario, id_libro, DiasPrestar) VALUES (@id_usuario, @id_libro, @DiasPrestar)";
-                    SqlCommand cmd = new SqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@id_usuario", idUsuario);
-                    cmd.Parameters.AddWithValue("@id_libro", idLibro);
-                    cmd.Parameters.AddWithValue("@DiasPrestar", diasprestar);
-                    cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("✅ Préstamo registrado correctamente.");
+                    comboBoxUsers.Items.Add(readerUsers["nombreCompleto"].ToString());
                 }
 
-                LoadPrestamos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al registrar préstamo: {ex.Message}");
-            }
-            string idUser = txtIdUser.Text;
-            string idBook = txtIdBook.Text;
-            int diasPrestar = (int)numericUpDown1.Value;
-            if (string.IsNullOrWhiteSpace(txtIdUser.Text) ||
-                string.IsNullOrWhiteSpace(txtIdBook.Text) ||
-                string.IsNullOrWhiteSpace(numericUpDown1.Text))
-            {
-                MessageBox.Show("⚠️ Por favor, complete todos los campos antes de agregar el préstamo. ⚠️",
-                                "Campos incompletos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                readerUsers.Close();
 
+                // 🔹 Cargar libros disponibles
+                string queryBooks = "SELECT titulo FROM Libro WHERE disponibilidad > 0";
+                SqlCommand cmdBooks = new SqlCommand(queryBooks, conn);
+                SqlDataReader readerBooks = cmdBooks.ExecuteReader();
 
-            Prestamo newPrestamo = new Prestamo(int.Parse(idUser), int.Parse(idBook), diasPrestar);
+                while (readerBooks.Read())
+                {
+                    comboBoxBooks.Items.Add(readerBooks["titulo"].ToString());
+                }
 
-            db.AddPrestamos(newPrestamo);
-            message.ForeColor = Color.Green;
-            message.Text = "Prestamo agregado CORRECTAMENTE...✅";
-            LoadPrestamos();
-        }*/
+                readerBooks.Close();
+            }
+        }
         private void buttonAgregarUsuarioPrestamo_Click(object sender, EventArgs e)
         {
             if (comboBoxUsers.SelectedValue == null || comboBoxBooks.SelectedValue == null)
@@ -220,6 +195,16 @@ namespace Bibliosoft
             int idUsuario = Convert.ToInt32(comboBoxUsers.SelectedValue);
             int idLibro = Convert.ToInt32(comboBoxBooks.SelectedValue);
             int diasPrestar = Convert.ToInt32(numericUpDown1.Value); // si usas un NumericUpDown
+            string nombreUsuario = comboBoxUsers.Text;
+            string nombreLibro = comboBoxBooks.Text;
+
+            var libro = db.GetBookById(idLibro);
+            if (libro.available == 0)
+            {
+                message.ForeColor = Color.OrangeRed;
+                message.Text = $"❌ El libro '{nombreLibro}' no está disponible.";
+                return;
+            }
 
             try
             {
@@ -237,11 +222,15 @@ namespace Bibliosoft
                 }
                 messagee.ForeColor = Color.Green;
                 messagee.Text = "✅ Préstamo registrado correctamente. ✅";
+                db.ActualizarDisponibilidadLibro(idLibro, 0);
+                LoadPrestamos();
+                LoadComboBox();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al registrar el préstamo: " + ex.Message);
             }
+            
         }
         private void dataGridView2_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -257,33 +246,26 @@ namespace Bibliosoft
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Validar que el campo no esté vacío
-            if (string.IsNullOrWhiteSpace(txtIdUser.Text))
+            if (comboBoxUsers.SelectedValue == null)
             {
-                MessageBox.Show("Por favor ingresa el ID del usuario.", "Campo requerido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                message.ForeColor = Color.Red;
+                message.Text = "⚠️ Selecciona un usuario para buscar su préstamo.";
                 return;
             }
 
-            // Convertir el texto a número
-            int idUsuario = int.Parse(txtIdUser.Text);
+            int idUsuario = Convert.ToInt32(comboBoxUsers.SelectedValue);
+            var prestamos = db.GetPrestamos(idUsuario);
 
-            // Crear instancia de la clase Dbcrud
-            Dbcrud db = new Dbcrud();
-
-            // Llamar al método que busca préstamos
-            List<Prestamo> prestamosEncontrados = db.BuscarPrestamoPorUsuario(idUsuario);
-
-            // Mostrar los resultados en el DataGridView
-            if (prestamosEncontrados.Count > 0)
+            if (prestamos.Count > 0)
             {
-                messagealert.ForeColor = Color.Green;
-                message.Text = $"Préstamos encontrados para el usuario ID {idUsuario}.✅";
-                dataGridView2.DataSource = prestamosEncontrados;
+                dataGridView2.DataSource = prestamos;
+                message.ForeColor = Color.Green;
+                message.Text = $"📚 Se encontraron {prestamos.Count} préstamos de {comboBoxUsers.Text}.";
             }
             else
             {
-                MessageBox.Show("No se encontraron préstamos para este usuario.", "Sin resultados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView2.DataSource = null;
+                message.ForeColor = Color.OrangeRed;
+                message.Text = $"⚠️ {comboBoxUsers.Text} no tiene préstamos registrados.";
             }
         }
 
@@ -294,39 +276,29 @@ namespace Bibliosoft
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (txtIdUser.Text != "")
+            if (comboBoxUsers.SelectedValue == null)
             {
-                // Buscar primero el libro con el id ingresado
-                prestamos = db.GetPrestamos(int.Parse(txtIdUser.Text));
+                message.ForeColor = Color.Red;
+                message.Text = "⚠️ Selecciona un usuario para eliminar su préstamo.";
+                return;
+            }
 
+            int idUsuario = Convert.ToInt32(comboBoxUsers.SelectedValue);
+            string nombreUsuario = comboBoxUsers.Text;
 
-                if (prestamos.Count > 0) // Si existe el libro
-                {
-                    string idUserToDelete = txtIdUser.Text;
+            var prestamos = db.GetPrestamos(idUsuario);
 
-                    // Llamamos al método de la clase dbCrud para eliminarlo
-                    db.DeletePrestamo(idUserToDelete);
-
-                    message.ForeColor = Color.Green;
-                    message.Text = $"Prestamo con id de usuario {idUserToDelete}, eliminado correctamente ✅";
-
-                    // Recargamos la lista de libros en la vista
-                    LoadPrestamos();
-
-                    // Limpiamos los controles
-                    txtIdUser.Clear();
-                    txtIdBook.Clear();
-                    numericUpDown1.Value=0;
-                }
-                else
-                {
-                    message.ForeColor = Color.Red;
-                    message.Text = $"⚠️ El id de usuario: {txtIdUser.Text} NO existe. Inténtelo con otro ⚠️";
-                }
+            if (prestamos.Count > 0)
+            {
+                db.DeletePrestamo(idUsuario.ToString());
+                message.ForeColor = Color.Green;
+                message.Text = $"✅ Se eliminaron los préstamos del usuario {nombreUsuario}.";
+                LoadPrestamos();
             }
             else
             {
-                MessageBox.Show("⚠️Debe ingresar el id del usuario para eliminar prestamo ⚠️");
+                message.ForeColor = Color.OrangeRed;
+                message.Text = $"⚠️ {nombreUsuario} no tiene préstamos para eliminar.";
             }
         }
     }

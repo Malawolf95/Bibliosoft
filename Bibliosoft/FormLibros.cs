@@ -14,7 +14,7 @@ namespace Bibliosoft
 {
     public partial class FormLibros : Form
     {
-        private Dbcrud db;
+        private LibrosDAO db;
         // Lista para recibir los libros del método GetBooks
         private List<Libros> books;
         // Declarar vble para guardar el idbook del libro encontrado
@@ -24,7 +24,7 @@ namespace Bibliosoft
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             // instanciar la clase dbCrud
-            db = new Dbcrud();
+            db = new LibrosDAO();
 
             LoadBooks();
         }
@@ -231,6 +231,16 @@ namespace Bibliosoft
         private void txtTitleBook_KeyPress(object sender, KeyPressEventArgs e)
         {
             
+        }
+
+        private void labelListado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
