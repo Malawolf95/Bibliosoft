@@ -50,6 +50,7 @@
             this.labelGestionarL = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonVolverDev = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -271,11 +272,27 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonVolverDev
+            // 
+            this.buttonVolverDev.BackColor = System.Drawing.Color.Transparent;
+            this.buttonVolverDev.FlatAppearance.BorderSize = 0;
+            this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonVolverDev.Location = new System.Drawing.Point(-38, 510);
+            this.buttonVolverDev.Name = "buttonVolverDev";
+            this.buttonVolverDev.Size = new System.Drawing.Size(205, 32);
+            this.buttonVolverDev.TabIndex = 35;
+            this.buttonVolverDev.Text = "< Volver ";
+            this.buttonVolverDev.UseVisualStyleBackColor = false;
+            this.buttonVolverDev.Click += new System.EventHandler(this.buttonVolverDev_Click);
+            // 
             // FormRegistrocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 554);
+            this.Controls.Add(this.buttonVolverDev);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelGestionarL);
             this.Controls.Add(this.label7);
@@ -329,5 +346,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label labelGestionarL;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonVolverDev;
     }
 }

@@ -270,5 +270,8 @@
   <ItemGroup>
     <None Include="Resources\user_person_profile_avatar_icon_190943.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_person_profile_avatar_icon_190943 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

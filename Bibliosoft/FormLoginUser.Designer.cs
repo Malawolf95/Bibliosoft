@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.buttonVolverDev = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -121,11 +122,27 @@
             this.linkLabel1.Text = "¿Olvidaste su contraseña?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // buttonVolverDev
+            // 
+            this.buttonVolverDev.BackColor = System.Drawing.Color.Transparent;
+            this.buttonVolverDev.FlatAppearance.BorderSize = 0;
+            this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.buttonVolverDev.Location = new System.Drawing.Point(-46, 430);
+            this.buttonVolverDev.Name = "buttonVolverDev";
+            this.buttonVolverDev.Size = new System.Drawing.Size(205, 32);
+            this.buttonVolverDev.TabIndex = 39;
+            this.buttonVolverDev.Text = "< Volver ";
+            this.buttonVolverDev.UseVisualStyleBackColor = false;
+            this.buttonVolverDev.Click += new System.EventHandler(this.buttonVolverDev_Click);
+            // 
             // FormLoginUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(695, 474);
+            this.Controls.Add(this.buttonVolverDev);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -151,5 +168,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button buttonVolverDev;
     }
 }

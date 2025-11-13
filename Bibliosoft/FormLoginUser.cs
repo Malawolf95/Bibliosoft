@@ -97,5 +97,16 @@ namespace Bibliosoft
             frm.Show();
             this.Hide();
         }
+
+        private void buttonVolverDev_Click(object sender, EventArgs e)
+        {
+            Animaciones.SlideOut(this, "right");
+            Form volver = new FormRegistrocs();
+
+
+            volver.Show();
+            Animaciones.SlideIn(volver, "left");
+            this.Close();
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace Bibliosoft
             foto = FotoPerfil;
         }
 
-        private void FormUsuariosApp_Load(object sender, EventArgs e)
+        /*private void FormUsuariosApp_Load(object sender, EventArgs e)
         {
             lblNombre.Text = nombre;
 
@@ -33,7 +33,28 @@ namespace Bibliosoft
             }
             else
             {
-                pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943; // imagen por defecto
+                pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943__1_; // imagen por defecto
+            }
+        }*/
+        private void FormUsuariosApp_Load(object sender, EventArgs e)
+        {
+            lblNombre.Text = nombre;
+
+            try
+            {
+                if (!string.IsNullOrEmpty(foto) && File.Exists(foto))
+                {
+                    pictureBoxPerfil.Image = Image.FromFile(foto);
+                }
+                else
+                {
+                    pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943__1_;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943__1_;
             }
         }
     }
