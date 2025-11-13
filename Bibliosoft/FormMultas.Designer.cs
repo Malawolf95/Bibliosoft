@@ -47,10 +47,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(603, 226);
+            this.label1.Location = new System.Drawing.Point(603, 193);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(10);
-            this.label1.Size = new System.Drawing.Size(310, 78);
+            this.label1.Size = new System.Drawing.Size(304, 77);
             this.label1.TabIndex = 9;
             this.label1.Text = "SANCIONES";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -62,7 +62,7 @@
             this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolverDev.Location = new System.Drawing.Point(297, 709);
+            this.buttonVolverDev.Location = new System.Drawing.Point(293, 639);
             this.buttonVolverDev.Name = "buttonVolverDev";
             this.buttonVolverDev.Size = new System.Drawing.Size(205, 32);
             this.buttonVolverDev.TabIndex = 10;
@@ -75,7 +75,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
-            this.dataGridView1.Location = new System.Drawing.Point(338, 339);
+            this.dataGridView1.Location = new System.Drawing.Point(338, 306);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -90,7 +90,7 @@
             this.buttonBuscarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonBuscarUsuario.Image = global::Bibliosoft.Properties.Resources.icons8_búsqueda_18;
             this.buttonBuscarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarUsuario.Location = new System.Drawing.Point(963, 503);
+            this.buttonBuscarUsuario.Location = new System.Drawing.Point(963, 470);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
             this.buttonBuscarUsuario.Size = new System.Drawing.Size(221, 57);
             this.buttonBuscarUsuario.TabIndex = 23;
@@ -106,7 +106,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Image = global::Bibliosoft.Properties.Resources.icons8_basura_18;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(963, 578);
+            this.button1.Location = new System.Drawing.Point(963, 545);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(221, 57);
             this.button1.TabIndex = 24;
@@ -117,7 +117,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(963, 380);
+            this.textBox1.Location = new System.Drawing.Point(963, 347);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(221, 22);
             this.textBox1.TabIndex = 25;
@@ -129,7 +129,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(830, 380);
+            this.label2.Location = new System.Drawing.Point(830, 347);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 19);
             this.label2.TabIndex = 26;
@@ -143,7 +143,7 @@
             // 
             this.message.AutoSize = true;
             this.message.BackColor = System.Drawing.Color.Transparent;
-            this.message.Location = new System.Drawing.Point(960, 351);
+            this.message.Location = new System.Drawing.Point(960, 318);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 27;
@@ -165,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "FormMultas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multas";
             this.Load += new System.EventHandler(this.FormMultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

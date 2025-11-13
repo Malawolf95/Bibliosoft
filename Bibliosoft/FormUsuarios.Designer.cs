@@ -57,7 +57,7 @@
             this.buttonVolver1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolver1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolver1.Location = new System.Drawing.Point(245, 734);
+            this.buttonVolver1.Location = new System.Drawing.Point(218, 664);
             this.buttonVolver1.Name = "buttonVolver1";
             this.buttonVolver1.Size = new System.Drawing.Size(202, 45);
             this.buttonVolver1.TabIndex = 0;
@@ -85,7 +85,7 @@
             this.labelUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.labelUsers.Location = new System.Drawing.Point(274, 289);
             this.labelUsers.Name = "labelUsers";
-            this.labelUsers.Size = new System.Drawing.Size(138, 31);
+            this.labelUsers.Size = new System.Drawing.Size(130, 30);
             this.labelUsers.TabIndex = 13;
             this.labelUsers.Text = "USUARIOS";
             // 
@@ -166,13 +166,12 @@
             this.buttonAgregarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAgregarUsuario.Image = global::Bibliosoft.Properties.Resources.icons8_símbolo_más_18;
             this.buttonAgregarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregarUsuario.Location = new System.Drawing.Point(1046, 496);
+            this.buttonAgregarUsuario.Location = new System.Drawing.Point(1046, 434);
             this.buttonAgregarUsuario.Name = "buttonAgregarUsuario";
             this.buttonAgregarUsuario.Size = new System.Drawing.Size(204, 43);
             this.buttonAgregarUsuario.TabIndex = 21;
-            this.buttonAgregarUsuario.Text = "           Agregar Usuario";
+            this.buttonAgregarUsuario.Text = "Agregar Usuario";
             this.buttonAgregarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAgregarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonAgregarUsuario.UseVisualStyleBackColor = false;
             this.buttonAgregarUsuario.Click += new System.EventHandler(this.buttonAgregarUsuario_Click);
             // 
@@ -184,7 +183,7 @@
             this.buttonBuscarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonBuscarUsuario.Image = global::Bibliosoft.Properties.Resources.icons8_búsqueda_18;
             this.buttonBuscarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBuscarUsuario.Location = new System.Drawing.Point(1046, 550);
+            this.buttonBuscarUsuario.Location = new System.Drawing.Point(1046, 488);
             this.buttonBuscarUsuario.Name = "buttonBuscarUsuario";
             this.buttonBuscarUsuario.Size = new System.Drawing.Size(204, 43);
             this.buttonBuscarUsuario.TabIndex = 22;
@@ -201,7 +200,7 @@
             this.buttonActualizarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonActualizarUsuario.Image = global::Bibliosoft.Properties.Resources.icons8_aprobar_y_actualizar_18__1_;
             this.buttonActualizarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonActualizarUsuario.Location = new System.Drawing.Point(1046, 605);
+            this.buttonActualizarUsuario.Location = new System.Drawing.Point(1046, 543);
             this.buttonActualizarUsuario.Name = "buttonActualizarUsuario";
             this.buttonActualizarUsuario.Size = new System.Drawing.Size(204, 43);
             this.buttonActualizarUsuario.TabIndex = 23;
@@ -218,7 +217,7 @@
             this.buttonEliminarUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonEliminarUsuario.Image = global::Bibliosoft.Properties.Resources.icons8_basura_18;
             this.buttonEliminarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEliminarUsuario.Location = new System.Drawing.Point(1046, 655);
+            this.buttonEliminarUsuario.Location = new System.Drawing.Point(1046, 593);
             this.buttonEliminarUsuario.Name = "buttonEliminarUsuario";
             this.buttonEliminarUsuario.Size = new System.Drawing.Size(204, 43);
             this.buttonEliminarUsuario.TabIndex = 24;
@@ -249,7 +248,7 @@
             // 
             this.messagePhone.AutoSize = true;
             this.messagePhone.BackColor = System.Drawing.Color.Transparent;
-            this.messagePhone.Location = new System.Drawing.Point(1025, 416);
+            this.messagePhone.Location = new System.Drawing.Point(1025, 354);
             this.messagePhone.Name = "messagePhone";
             this.messagePhone.Size = new System.Drawing.Size(0, 16);
             this.messagePhone.TabIndex = 27;
@@ -271,7 +270,7 @@
             this.labelGestionarL.AutoSize = true;
             this.labelGestionarL.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGestionarL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelGestionarL.Location = new System.Drawing.Point(927, 199);
+            this.labelGestionarL.Location = new System.Drawing.Point(930, 219);
             this.labelGestionarL.Name = "labelGestionarL";
             this.labelGestionarL.Size = new System.Drawing.Size(284, 31);
             this.labelGestionarL.TabIndex = 29;

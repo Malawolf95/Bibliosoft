@@ -64,7 +64,7 @@
             this.buttonVolverLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolverLibros.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverLibros.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolverLibros.Location = new System.Drawing.Point(270, 745);
+            this.buttonVolverLibros.Location = new System.Drawing.Point(256, 628);
             this.buttonVolverLibros.Margin = new System.Windows.Forms.Padding(0);
             this.buttonVolverLibros.Name = "buttonVolverLibros";
             this.buttonVolverLibros.Size = new System.Drawing.Size(176, 34);
@@ -79,7 +79,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(896, 284);
+            this.label1.Location = new System.Drawing.Point(932, 240);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 19);
             this.label1.TabIndex = 3;
@@ -91,7 +91,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(933, 325);
+            this.label2.Location = new System.Drawing.Point(969, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 19);
             this.label2.TabIndex = 4;
@@ -103,7 +103,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(872, 495);
+            this.label3.Location = new System.Drawing.Point(908, 451);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 19);
             this.label3.TabIndex = 5;
@@ -115,7 +115,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(269, 199);
+            this.label4.Location = new System.Drawing.Point(271, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(308, 62);
             this.label4.TabIndex = 6;
@@ -128,7 +128,7 @@
             this.rbYes.BackColor = System.Drawing.Color.Transparent;
             this.rbYes.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbYes.ForeColor = System.Drawing.Color.SteelBlue;
-            this.rbYes.Location = new System.Drawing.Point(1130, 495);
+            this.rbYes.Location = new System.Drawing.Point(1166, 451);
             this.rbYes.Name = "rbYes";
             this.rbYes.Size = new System.Drawing.Size(44, 23);
             this.rbYes.TabIndex = 7;
@@ -143,7 +143,7 @@
             this.rbNo.BackColor = System.Drawing.Color.Transparent;
             this.rbNo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNo.ForeColor = System.Drawing.Color.SteelBlue;
-            this.rbNo.Location = new System.Drawing.Point(1187, 495);
+            this.rbNo.Location = new System.Drawing.Point(1223, 451);
             this.rbNo.Name = "rbNo";
             this.rbNo.Size = new System.Drawing.Size(55, 23);
             this.rbNo.TabIndex = 8;
@@ -154,7 +154,7 @@
             // txtIdBook
             // 
             this.txtIdBook.BackColor = System.Drawing.SystemColors.Window;
-            this.txtIdBook.Location = new System.Drawing.Point(1004, 283);
+            this.txtIdBook.Location = new System.Drawing.Point(1040, 239);
             this.txtIdBook.Name = "txtIdBook";
             this.txtIdBook.Size = new System.Drawing.Size(236, 22);
             this.txtIdBook.TabIndex = 9;
@@ -162,7 +162,7 @@
             // 
             // txtTitleBook
             // 
-            this.txtTitleBook.Location = new System.Drawing.Point(1004, 322);
+            this.txtTitleBook.Location = new System.Drawing.Point(1040, 278);
             this.txtTitleBook.Name = "txtTitleBook";
             this.txtTitleBook.Size = new System.Drawing.Size(236, 22);
             this.txtTitleBook.TabIndex = 10;
@@ -172,7 +172,8 @@
             // 
             this.dgvBook.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBook.Location = new System.Drawing.Point(280, 333);
+            this.dgvBook.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dgvBook.Location = new System.Drawing.Point(282, 288);
             this.dgvBook.Margin = new System.Windows.Forms.Padding(4);
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.RowHeadersWidth = 51;
@@ -188,13 +189,12 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::Bibliosoft.Properties.Resources.icons8_símbolo_más_18;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1036, 525);
+            this.button1.Location = new System.Drawing.Point(1072, 481);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 43);
             this.button1.TabIndex = 12;
-            this.button1.Text = "            Agregar Libro";
+            this.button1.Text = "Agregar Libro";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -206,13 +206,12 @@
             this.buttonUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonUpdate.Image = global::Bibliosoft.Properties.Resources.icons8_aprobar_y_actualizar_18__1_;
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(1036, 574);
+            this.buttonUpdate.Location = new System.Drawing.Point(1072, 530);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(204, 43);
             this.buttonUpdate.TabIndex = 13;
-            this.buttonUpdate.Text = "         Actualizar Libro";
+            this.buttonUpdate.Text = "Actualizar Libro";
             this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
@@ -224,20 +223,19 @@
             this.buttonSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonSearch.Image = global::Bibliosoft.Properties.Resources.icons8_búsqueda_18;
             this.buttonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSearch.Location = new System.Drawing.Point(1036, 623);
+            this.buttonSearch.Location = new System.Drawing.Point(1072, 579);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(204, 43);
             this.buttonSearch.TabIndex = 14;
-            this.buttonSearch.Text = "               Buscar Libro";
+            this.buttonSearch.Text = "Buscar Libro";
             this.buttonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonSearch.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // message
             // 
             this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(892, 178);
+            this.message.Location = new System.Drawing.Point(894, 133);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 15;
@@ -250,18 +248,19 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::Bibliosoft.Properties.Resources.icons8_basura_18;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1036, 672);
+            this.button2.Location = new System.Drawing.Point(1072, 628);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 43);
             this.button2.TabIndex = 16;
-            this.button2.Text = "            Eliminar Libro";
+            this.button2.Text = "Eliminar Libro";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // messageIdBook
             // 
             this.messageIdBook.AutoSize = true;
-            this.messageIdBook.Location = new System.Drawing.Point(1060, 222);
+            this.messageIdBook.Location = new System.Drawing.Point(1096, 178);
             this.messageIdBook.Name = "messageIdBook";
             this.messageIdBook.Size = new System.Drawing.Size(0, 16);
             this.messageIdBook.TabIndex = 17;
@@ -269,7 +268,7 @@
             // messageTitleBook
             // 
             this.messageTitleBook.AutoSize = true;
-            this.messageTitleBook.Location = new System.Drawing.Point(1107, 308);
+            this.messageTitleBook.Location = new System.Drawing.Point(1143, 264);
             this.messageTitleBook.Name = "messageTitleBook";
             this.messageTitleBook.Size = new System.Drawing.Size(0, 16);
             this.messageTitleBook.TabIndex = 18;
@@ -278,7 +277,7 @@
             // 
             this.radiobutton.AutoSize = true;
             this.radiobutton.BackColor = System.Drawing.Color.Transparent;
-            this.radiobutton.Location = new System.Drawing.Point(1013, 583);
+            this.radiobutton.Location = new System.Drawing.Point(1049, 539);
             this.radiobutton.Name = "radiobutton";
             this.radiobutton.Size = new System.Drawing.Size(0, 16);
             this.radiobutton.TabIndex = 19;
@@ -288,7 +287,7 @@
             this.labelListado.AutoSize = true;
             this.labelListado.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelListado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelListado.Location = new System.Drawing.Point(274, 289);
+            this.labelListado.Location = new System.Drawing.Point(276, 244);
             this.labelListado.Name = "labelListado";
             this.labelListado.Size = new System.Drawing.Size(248, 31);
             this.labelListado.TabIndex = 20;
@@ -300,7 +299,7 @@
             this.labelGestionarL.AutoSize = true;
             this.labelGestionarL.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGestionarL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelGestionarL.Location = new System.Drawing.Point(962, 224);
+            this.labelGestionarL.Location = new System.Drawing.Point(998, 180);
             this.labelGestionarL.Name = "labelGestionarL";
             this.labelGestionarL.Size = new System.Drawing.Size(232, 31);
             this.labelGestionarL.TabIndex = 21;
@@ -312,7 +311,7 @@
             this.labelAutor.AutoSize = true;
             this.labelAutor.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAutor.ForeColor = System.Drawing.Color.Silver;
-            this.labelAutor.Location = new System.Drawing.Point(933, 366);
+            this.labelAutor.Location = new System.Drawing.Point(969, 322);
             this.labelAutor.Name = "labelAutor";
             this.labelAutor.Size = new System.Drawing.Size(52, 19);
             this.labelAutor.TabIndex = 22;
@@ -323,7 +322,7 @@
             this.labelAño.AutoSize = true;
             this.labelAño.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAño.ForeColor = System.Drawing.Color.Silver;
-            this.labelAño.Location = new System.Drawing.Point(944, 408);
+            this.labelAño.Location = new System.Drawing.Point(980, 364);
             this.labelAño.Name = "labelAño";
             this.labelAño.Size = new System.Drawing.Size(40, 19);
             this.labelAño.TabIndex = 23;
@@ -334,7 +333,7 @@
             this.labelGenero.AutoSize = true;
             this.labelGenero.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGenero.ForeColor = System.Drawing.Color.Silver;
-            this.labelGenero.Location = new System.Drawing.Point(925, 450);
+            this.labelGenero.Location = new System.Drawing.Point(961, 406);
             this.labelGenero.Name = "labelGenero";
             this.labelGenero.Size = new System.Drawing.Size(64, 19);
             this.labelGenero.TabIndex = 24;
@@ -344,7 +343,7 @@
             // 
             this.textBoxAutor.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxAutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxAutor.Location = new System.Drawing.Point(1004, 366);
+            this.textBoxAutor.Location = new System.Drawing.Point(1040, 322);
             this.textBoxAutor.Name = "textBoxAutor";
             this.textBoxAutor.Size = new System.Drawing.Size(236, 22);
             this.textBoxAutor.TabIndex = 25;
@@ -353,7 +352,7 @@
             // 
             this.textBoxAño.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxAño.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxAño.Location = new System.Drawing.Point(1004, 408);
+            this.textBoxAño.Location = new System.Drawing.Point(1040, 364);
             this.textBoxAño.Name = "textBoxAño";
             this.textBoxAño.Size = new System.Drawing.Size(236, 22);
             this.textBoxAño.TabIndex = 26;
@@ -362,7 +361,7 @@
             // 
             this.textBoxGenero.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBoxGenero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxGenero.Location = new System.Drawing.Point(1004, 450);
+            this.textBoxGenero.Location = new System.Drawing.Point(1040, 406);
             this.textBoxGenero.Name = "textBoxGenero";
             this.textBoxGenero.Size = new System.Drawing.Size(236, 22);
             this.textBoxGenero.TabIndex = 27;
@@ -373,7 +372,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1518, 977);
+            this.ClientSize = new System.Drawing.Size(1571, 1019);
+            this.Controls.Add(this.dgvBook);
             this.Controls.Add(this.textBoxGenero);
             this.Controls.Add(this.textBoxAño);
             this.Controls.Add(this.textBoxAutor);
@@ -390,7 +390,6 @@
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvBook);
             this.Controls.Add(this.txtTitleBook);
             this.Controls.Add(this.txtIdBook);
             this.Controls.Add(this.rbNo);
@@ -401,8 +400,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonVolverLibros);
             this.DoubleBuffered = true;
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FormLibros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LIBROS📗";
             this.Load += new System.EventHandler(this.FormLibros_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBook)).EndInit();

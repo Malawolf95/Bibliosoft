@@ -41,24 +41,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.label1.Location = new System.Drawing.Point(847, 203);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(539, 201);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 40);
+            this.label1.Size = new System.Drawing.Size(242, 50);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Bibliosoft";
+            this.label1.Text = "BIBLIOSOFT";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // buttonLibros
             // 
-            this.buttonLibros.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonLibros.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.buttonLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLibros.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLibros.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonLibros.Location = new System.Drawing.Point(791, 329);
+            this.buttonLibros.Image = global::Bibliosoft.Properties.Resources.icons8_literatura_21;
+            this.buttonLibros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonLibros.Location = new System.Drawing.Point(509, 290);
             this.buttonLibros.Name = "buttonLibros";
-            this.buttonLibros.Size = new System.Drawing.Size(291, 51);
+            this.buttonLibros.Padding = new System.Windows.Forms.Padding(12, 8, 8, 8);
+            this.buttonLibros.Size = new System.Drawing.Size(310, 60);
             this.buttonLibros.TabIndex = 2;
             this.buttonLibros.Text = "LIBROS";
             this.buttonLibros.UseVisualStyleBackColor = false;
@@ -66,13 +69,16 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumPurple;
+            this.button2.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(791, 408);
+            this.button2.Image = global::Bibliosoft.Properties.Resources.icons8_usuario_21;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(509, 369);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(291, 51);
+            this.button2.Padding = new System.Windows.Forms.Padding(12);
+            this.button2.Size = new System.Drawing.Size(310, 60);
             this.button2.TabIndex = 3;
             this.button2.Text = "USUARIOS";
             this.button2.UseVisualStyleBackColor = false;
@@ -80,13 +86,16 @@
             // 
             // buttonPrestamos
             // 
-            this.buttonPrestamos.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonPrestamos.BackColor = System.Drawing.Color.Peru;
             this.buttonPrestamos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPrestamos.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPrestamos.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonPrestamos.Location = new System.Drawing.Point(791, 484);
+            this.buttonPrestamos.Image = global::Bibliosoft.Properties.Resources.icons8_lista_de_ingredientes_21;
+            this.buttonPrestamos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPrestamos.Location = new System.Drawing.Point(509, 445);
             this.buttonPrestamos.Name = "buttonPrestamos";
-            this.buttonPrestamos.Size = new System.Drawing.Size(291, 51);
+            this.buttonPrestamos.Padding = new System.Windows.Forms.Padding(12);
+            this.buttonPrestamos.Size = new System.Drawing.Size(310, 60);
             this.buttonPrestamos.TabIndex = 4;
             this.buttonPrestamos.Text = "PRESTAMOS";
             this.buttonPrestamos.UseVisualStyleBackColor = false;
@@ -94,13 +103,16 @@
             // 
             // buttonDevoluciones
             // 
-            this.buttonDevoluciones.BackColor = System.Drawing.Color.MediumPurple;
+            this.buttonDevoluciones.BackColor = System.Drawing.Color.IndianRed;
             this.buttonDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDevoluciones.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDevoluciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonDevoluciones.Location = new System.Drawing.Point(791, 559);
+            this.buttonDevoluciones.Image = global::Bibliosoft.Properties.Resources.icons8_sincronización_de_conexión_21;
+            this.buttonDevoluciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonDevoluciones.Location = new System.Drawing.Point(509, 520);
             this.buttonDevoluciones.Name = "buttonDevoluciones";
-            this.buttonDevoluciones.Size = new System.Drawing.Size(291, 51);
+            this.buttonDevoluciones.Padding = new System.Windows.Forms.Padding(12);
+            this.buttonDevoluciones.Size = new System.Drawing.Size(310, 60);
             this.buttonDevoluciones.TabIndex = 5;
             this.buttonDevoluciones.Text = "DEVOLUCIONES";
             this.buttonDevoluciones.UseVisualStyleBackColor = false;
@@ -110,8 +122,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(328, 9);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(12, 876);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(579, 16);
             this.label2.TabIndex = 6;
@@ -120,13 +132,16 @@
             // 
             // botonMultas
             // 
-            this.botonMultas.BackColor = System.Drawing.Color.MediumPurple;
+            this.botonMultas.BackColor = System.Drawing.Color.Purple;
             this.botonMultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonMultas.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonMultas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.botonMultas.Location = new System.Drawing.Point(791, 633);
+            this.botonMultas.Image = global::Bibliosoft.Properties.Resources.icons8_error_21;
+            this.botonMultas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.botonMultas.Location = new System.Drawing.Point(509, 594);
             this.botonMultas.Name = "botonMultas";
-            this.botonMultas.Size = new System.Drawing.Size(291, 51);
+            this.botonMultas.Padding = new System.Windows.Forms.Padding(12);
+            this.botonMultas.Size = new System.Drawing.Size(310, 60);
             this.botonMultas.TabIndex = 7;
             this.botonMultas.Text = "MULTAS";
             this.botonMultas.UseVisualStyleBackColor = false;
@@ -137,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BackgroundImage = global::Bibliosoft.Properties.Resources.Captura_de_pantalla_2025_10_16_121910;
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1323, 901);
             this.Controls.Add(this.botonMultas);

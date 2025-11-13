@@ -36,7 +36,7 @@
             // 
             // buttonLibros
             // 
-            this.buttonLibros.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonLibros.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLibros.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLibros.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -48,6 +48,7 @@
             this.buttonLibros.Text = "      USUARIO ";
             this.buttonLibros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonLibros.UseVisualStyleBackColor = false;
+            this.buttonLibros.Click += new System.EventHandler(this.buttonLibros_Click);
             // 
             // button1
             // 

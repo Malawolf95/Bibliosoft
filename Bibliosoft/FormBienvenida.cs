@@ -34,5 +34,12 @@ namespace Bibliosoft
         {
 
         }
+
+        private void buttonLibros_Click(object sender, EventArgs e)
+        {
+            Form Registro = new FormRegistrocs();
+            Registro.Show();
+            this.Hide();
+        }
     }
 }

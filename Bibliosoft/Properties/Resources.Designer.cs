@@ -63,6 +63,16 @@ namespace Bibliosoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3844476_eye_see_show_view_watch_110339 {
+            get {
+                object obj = ResourceManager.GetObject("3844476-eye-see-show-view-watch_110339", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_pantalla_2025_10_16_121910 {
             get {
                 object obj = ResourceManager.GetObject("Captura de pantalla 2025-10-16 121910", resourceCulture);
@@ -183,6 +193,36 @@ namespace Bibliosoft.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_error_21 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-error-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_lista_de_ingredientes_21 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lista-de-ingredientes-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_literatura_21 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-literatura-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_símbolo_más_18 {
             get {
                 object obj = ResourceManager.GetObject("icons8-símbolo-más-18", resourceCulture);
@@ -196,6 +236,26 @@ namespace Bibliosoft.Properties {
         internal static System.Drawing.Bitmap icons8_símbolo_más_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-símbolo-más-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sincronización_de_conexión_21 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sincronización-de-conexión-21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_usuario_21 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-usuario-21", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -217,6 +277,45 @@ namespace Bibliosoft.Properties {
             get {
                 object obj = ResourceManager.GetObject("libreria", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no_see_visible_hidde_icon_187886 {
+            get {
+                object obj = ResourceManager.GetObject("no_see_visible_hidde_icon_187886", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nosee {
+            get {
+                object obj = ResourceManager.GetObject("nosee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap see_eye_visible_icon_187826 {
+            get {
+                object obj = ResourceManager.GetObject("see_eye_visible_icon_187826", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a see_eye_visible_icon_187826.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
     }

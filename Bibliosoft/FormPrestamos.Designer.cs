@@ -63,7 +63,7 @@
             this.buttonVolverPrest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolverPrest.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverPrest.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolverPrest.Location = new System.Drawing.Point(270, 745);
+            this.buttonVolverPrest.Location = new System.Drawing.Point(216, 614);
             this.buttonVolverPrest.Margin = new System.Windows.Forms.Padding(0);
             this.buttonVolverPrest.Name = "buttonVolverPrest";
             this.buttonVolverPrest.Size = new System.Drawing.Size(210, 34);
@@ -76,7 +76,7 @@
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(280, 333);
+            this.dataGridView2.Location = new System.Drawing.Point(270, 265);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
@@ -91,9 +91,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(274, 289);
+            this.label1.Location = new System.Drawing.Point(264, 221);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 31);
+            this.label1.Size = new System.Drawing.Size(153, 30);
             this.label1.TabIndex = 4;
             this.label1.Text = "PRÉSTAMOS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -104,7 +104,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(922, 332);
+            this.label2.Location = new System.Drawing.Point(912, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 5;
@@ -116,7 +116,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(942, 373);
+            this.label3.Location = new System.Drawing.Point(932, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 19);
             this.label3.TabIndex = 6;
@@ -128,7 +128,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(878, 414);
+            this.label4.Location = new System.Drawing.Point(868, 346);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 19);
             this.label4.TabIndex = 7;
@@ -154,7 +154,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.ForeColor = System.Drawing.Color.SlateGray;
-            this.numericUpDown1.Location = new System.Drawing.Point(1004, 413);
+            this.numericUpDown1.Location = new System.Drawing.Point(994, 345);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(236, 22);
             this.numericUpDown1.TabIndex = 10;
@@ -166,14 +166,13 @@
             this.buttonAgregarUsuarioPrestamo.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAgregarUsuarioPrestamo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonAgregarUsuarioPrestamo.Image = global::Bibliosoft.Properties.Resources.icons8_símbolo_más_18;
-            this.buttonAgregarUsuarioPrestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonAgregarUsuarioPrestamo.Location = new System.Drawing.Point(1036, 501);
+            this.buttonAgregarUsuarioPrestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAgregarUsuarioPrestamo.Location = new System.Drawing.Point(1026, 390);
             this.buttonAgregarUsuarioPrestamo.Name = "buttonAgregarUsuarioPrestamo";
             this.buttonAgregarUsuarioPrestamo.Size = new System.Drawing.Size(204, 43);
             this.buttonAgregarUsuarioPrestamo.TabIndex = 11;
-            this.buttonAgregarUsuarioPrestamo.Text = "         Agregar Usuario";
-            this.buttonAgregarUsuarioPrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAgregarUsuarioPrestamo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAgregarUsuarioPrestamo.Text = "Agregar Usuario";
+            this.buttonAgregarUsuarioPrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAgregarUsuarioPrestamo.UseVisualStyleBackColor = false;
             this.buttonAgregarUsuarioPrestamo.Click += new System.EventHandler(this.buttonAgregarUsuarioPrestamo_Click);
             // 
@@ -185,7 +184,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::Bibliosoft.Properties.Resources.icons8_búsqueda_18;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1036, 550);
+            this.button1.Location = new System.Drawing.Point(1026, 439);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(204, 43);
             this.button1.TabIndex = 12;
@@ -202,7 +201,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.Image = global::Bibliosoft.Properties.Resources.icons8_basura_18;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1036, 653);
+            this.button2.Location = new System.Drawing.Point(1026, 542);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(204, 43);
             this.button2.TabIndex = 13;
@@ -214,7 +213,7 @@
             // message
             // 
             this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(736, 144);
+            this.message.Location = new System.Drawing.Point(726, 76);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 14;
@@ -223,7 +222,7 @@
             // 
             this.messageIdUser.AutoSize = true;
             this.messageIdUser.BackColor = System.Drawing.Color.Transparent;
-            this.messageIdUser.Location = new System.Drawing.Point(1100, 209);
+            this.messageIdUser.Location = new System.Drawing.Point(1090, 141);
             this.messageIdUser.Name = "messageIdUser";
             this.messageIdUser.Size = new System.Drawing.Size(0, 16);
             this.messageIdUser.TabIndex = 15;
@@ -232,7 +231,7 @@
             // 
             this.messageIdBook.AutoSize = true;
             this.messageIdBook.BackColor = System.Drawing.Color.Transparent;
-            this.messageIdBook.Location = new System.Drawing.Point(1100, 337);
+            this.messageIdBook.Location = new System.Drawing.Point(1090, 269);
             this.messageIdBook.Name = "messageIdBook";
             this.messageIdBook.Size = new System.Drawing.Size(0, 16);
             this.messageIdBook.TabIndex = 16;
@@ -240,7 +239,7 @@
             // messagealert
             // 
             this.messagealert.AutoSize = true;
-            this.messagealert.Location = new System.Drawing.Point(755, 145);
+            this.messagealert.Location = new System.Drawing.Point(745, 77);
             this.messagealert.Name = "messagealert";
             this.messagealert.Size = new System.Drawing.Size(0, 16);
             this.messagealert.TabIndex = 17;
@@ -251,7 +250,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button3.Location = new System.Drawing.Point(651, 682);
+            this.button3.Location = new System.Drawing.Point(641, 614);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 32);
             this.button3.TabIndex = 18;
@@ -262,7 +261,7 @@
             // comboBoxUsers
             // 
             this.comboBoxUsers.FormattingEnabled = true;
-            this.comboBoxUsers.Location = new System.Drawing.Point(1004, 333);
+            this.comboBoxUsers.Location = new System.Drawing.Point(994, 265);
             this.comboBoxUsers.Name = "comboBoxUsers";
             this.comboBoxUsers.Size = new System.Drawing.Size(236, 24);
             this.comboBoxUsers.TabIndex = 19;
@@ -270,7 +269,7 @@
             // comboBoxBooks
             // 
             this.comboBoxBooks.FormattingEnabled = true;
-            this.comboBoxBooks.Location = new System.Drawing.Point(1004, 372);
+            this.comboBoxBooks.Location = new System.Drawing.Point(994, 304);
             this.comboBoxBooks.Name = "comboBoxBooks";
             this.comboBoxBooks.Size = new System.Drawing.Size(236, 24);
             this.comboBoxBooks.TabIndex = 20;
@@ -279,7 +278,7 @@
             // 
             this.messagee.AutoSize = true;
             this.messagee.BackColor = System.Drawing.Color.Transparent;
-            this.messagee.Location = new System.Drawing.Point(740, 142);
+            this.messagee.Location = new System.Drawing.Point(730, 74);
             this.messagee.Name = "messagee";
             this.messagee.Size = new System.Drawing.Size(0, 16);
             this.messagee.TabIndex = 21;
@@ -290,7 +289,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(269, 199);
+            this.label5.Location = new System.Drawing.Point(259, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(308, 62);
             this.label5.TabIndex = 22;
@@ -301,7 +300,7 @@
             this.labelGestionarL.AutoSize = true;
             this.labelGestionarL.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGestionarL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelGestionarL.Location = new System.Drawing.Point(940, 225);
+            this.labelGestionarL.Location = new System.Drawing.Point(930, 157);
             this.labelGestionarL.Name = "labelGestionarL";
             this.labelGestionarL.Size = new System.Drawing.Size(292, 31);
             this.labelGestionarL.TabIndex = 23;
@@ -315,13 +314,12 @@
             this.buttonUpdatePrestamo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.buttonUpdatePrestamo.Image = global::Bibliosoft.Properties.Resources.icons8_aprobar_y_actualizar_18__1_;
             this.buttonUpdatePrestamo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdatePrestamo.Location = new System.Drawing.Point(1036, 599);
+            this.buttonUpdatePrestamo.Location = new System.Drawing.Point(1026, 488);
             this.buttonUpdatePrestamo.Name = "buttonUpdatePrestamo";
             this.buttonUpdatePrestamo.Size = new System.Drawing.Size(204, 43);
             this.buttonUpdatePrestamo.TabIndex = 24;
-            this.buttonUpdatePrestamo.Text = "    Actualizar Préstamo";
+            this.buttonUpdatePrestamo.Text = "Actualizar Préstamo";
             this.buttonUpdatePrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonUpdatePrestamo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonUpdatePrestamo.UseVisualStyleBackColor = false;
             // 
             // FormPrestamos
@@ -356,6 +354,7 @@
             this.Controls.Add(this.buttonVolverPrest);
             this.DoubleBuffered = true;
             this.Name = "FormPrestamos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PRESTAMOS✍️";
             this.Load += new System.EventHandler(this.FormPrestamos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();

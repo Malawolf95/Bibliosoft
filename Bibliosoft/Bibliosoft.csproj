@@ -83,6 +83,12 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginUser.Designer.cs">
+      <DependentUpon>FormLoginUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,18 @@
     <Compile Include="FormPrestamos.Designer.cs">
       <DependentUpon>FormPrestamos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRecuperarContrasena.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecuperarContrasena.Designer.cs">
+      <DependentUpon>FormRecuperarContrasena.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRegistrocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRegistrocs.Designer.cs">
+      <DependentUpon>FormRegistrocs.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +121,7 @@
     </Compile>
     <Compile Include="Libros.cs" />
     <Compile Include="LibrosDAO.cs" />
+    <Compile Include="MasterMailServer.cs" />
     <Compile Include="Prestamos.cs" />
     <Compile Include="PrestamosDAO.cs" />
     <Compile Include="Program.cs" />
@@ -124,11 +143,20 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginUser.resx">
+      <DependentUpon>FormLoginUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMultas.resx">
       <DependentUpon>FormMultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrestamos.resx">
       <DependentUpon>FormPrestamos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecuperarContrasena.resx">
+      <DependentUpon>FormRecuperarContrasena.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRegistrocs.resx">
+      <DependentUpon>FormRegistrocs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
@@ -201,6 +229,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-usuario-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-literatura-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lista-de-ingredientes-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sincronización-de-conexión-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-error-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3844476-eye-see-show-view-watch_110339.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\see_eye_visible_icon_187826.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nosee.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_see_visible_hidde_icon_187886.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
