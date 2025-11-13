@@ -318,5 +318,15 @@ namespace Bibliosoft.Properties {
                 return ResourceManager.GetString("String", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_person_profile_avatar_icon_190943 {
+            get {
+                object obj = ResourceManager.GetObject("user_person_profile_avatar_icon_190943", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

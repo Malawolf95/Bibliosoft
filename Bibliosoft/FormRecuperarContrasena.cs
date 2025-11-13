@@ -28,6 +28,7 @@ namespace Bibliosoft
         {
 
         }
+        
 
         private void buttonVolverDev_Click(object sender, EventArgs e)
         {
@@ -39,9 +40,48 @@ namespace Bibliosoft
             Animaciones.SlideIn(volver, "left");
             this.Close();
         }
+        public string recoverPassword(string userRequesting)
+        {
+            using (SqlConnection conn = Conexion.GetConnection())
+            {
+                conn.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = conn;
+                    command.CommandText = "select *from Usuario where Correo=@Correo";
+                    command.Parameters.AddWithValue("@Correo", userRequesting);
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.Read() == true)
+                    {
+                        string userName = reader.GetString(1);
+                        string userMail = reader.GetString(4);
+                        string accountPassword = reader.GetString(5);
+                        var mailService = new SystemSupportMail();
+                        string mensaje;
+                        message2.ForeColor = Color.Green;
+                        mensaje = message2.Text = "✅ Solicitud exitosa. Revisa tu correo. ✅, \n " + userMail + "\n";
+                        mailService.sendMail(
+                          subject: "SYSTEM: Solicitud de recuperación de contraseña.",
+                          body: "Hola," + userName + " \n\n" +
+                          "tu contraseña actual es: " + accountPassword +
+                          "\n",
+                          recipientMail: new List<string> { userMail }
+                          );
 
+
+                        return mensaje;
+                    }
+                    else
+                        return "⚠️ Este correo no se encuentra registrado. ⚠️";
+                }
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
+            var user = new FormRecuperarContrasena();
+            var result = user.recoverPassword(textBox1.Text);
+            message.Text = result;
             correoDestino = textBox1.Text.Trim();
 
             if (string.IsNullOrEmpty(correoDestino))
@@ -82,10 +122,11 @@ namespace Bibliosoft
                 mail.Subject = "Recuperación de contraseña - Bibliosoft";
                 mail.Body = $"Tu código de verificación es: {codigoGenerado}";
 
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com",587);
                 smtp.Port = 587;
-                smtp.Credentials = new System.Net.NetworkCredential("miguelangelhenaotorres05@gmail.com", "vnht hwzk dhde eujk");
+                smtp.Credentials = new System.Net.NetworkCredential("miguelangelhenaotorres05@gmail.com", "vnhthwzkdhdeeujk");
                 smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = false;
                 smtp.Send(mail);
 
                 MessageBox.Show("Código enviado. Revisa tu correo.✅");
@@ -143,6 +184,36 @@ namespace Bibliosoft
                     sb.Append(b.ToString("x2"));
                 return sb.ToString();
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

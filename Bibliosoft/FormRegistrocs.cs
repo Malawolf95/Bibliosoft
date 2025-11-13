@@ -45,23 +45,20 @@ namespace Bibliosoft
         {
             if (textBox3.Text != textBox4.Text)
             {
-                message.ForeColor = Color.Red;
-                message.Text = "⚠️ Las contraseñas no coinciden ⚠️";
-                
+                MessageBox.Show("Las contraseñas no coinciden");
                 return;
             }
 
-            if (!textBox2.Text.Contains("@"))
+            if (!textBox6.Text.Contains("@"))
             {
-                message.ForeColor = Color.Red;
-                message.Text = "⚠️ Ingrese un correo valido ⚠️";
+                MessageBox.Show("Correo no válido");
                 return;
             }
 
             string hashPassword = HashPassword(textBox3.Text);
 
-            string query = "INSERT INTO Usuario (nombreCompleto,id_usuario,telefono Correo, Contrasena, FotoPerfil) " +
-                           "VALUES (@nombreCompleto,@id_usuario,@telefono, @Correo, @Contrasena, @FotoPerfil)";
+            string query = "INSERT INTO Usuario (nombreCompleto,id_usuario,telefono, Correo, Contrasena, FotoPerfil) " +
+                           "VALUES (@nombreCompleto,@id_usuario,@telefono @Correo, @Contrasena, @FotoPerfil)";
 
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {

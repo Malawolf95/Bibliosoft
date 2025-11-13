@@ -41,6 +41,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.message = new System.Windows.Forms.Label();
+            this.message2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonVolverDev
@@ -99,7 +100,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 40);
             this.button3.TabIndex = 37;
-            this.button3.Text = "Enviar Código";
+            this.button3.Text = "Enviar Correo";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -109,18 +110,20 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(177, 271);
+            this.label1.Location = new System.Drawing.Point(917, 391);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 38;
             this.label1.Text = "Código: ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(271, 268);
+            this.textBox2.Location = new System.Drawing.Point(1011, 388);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(129, 22);
             this.textBox2.TabIndex = 39;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // buttonResistrarse
             // 
@@ -129,7 +132,7 @@
             this.buttonResistrarse.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonResistrarse.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonResistrarse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonResistrarse.Location = new System.Drawing.Point(271, 426);
+            this.buttonResistrarse.Location = new System.Drawing.Point(1011, 546);
             this.buttonResistrarse.Name = "buttonResistrarse";
             this.buttonResistrarse.Size = new System.Drawing.Size(206, 47);
             this.buttonResistrarse.TabIndex = 40;
@@ -143,11 +146,12 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(93, 320);
+            this.label2.Location = new System.Drawing.Point(833, 440);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 19);
             this.label2.TabIndex = 41;
             this.label2.Text = "Nueva contraseña: ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -155,39 +159,51 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(67, 374);
+            this.label3.Location = new System.Drawing.Point(807, 494);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(181, 19);
             this.label3.TabIndex = 42;
             this.label3.Text = "Confirmar contraseña: ";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(271, 319);
+            this.textBox3.Location = new System.Drawing.Point(1011, 439);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(129, 22);
             this.textBox3.TabIndex = 43;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(271, 373);
+            this.textBox4.Location = new System.Drawing.Point(1011, 493);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(129, 22);
             this.textBox4.TabIndex = 44;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // message
             // 
             this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(568, 165);
+            this.message.Location = new System.Drawing.Point(534, 163);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 45;
+            // 
+            // message2
+            // 
+            this.message2.AutoSize = true;
+            this.message2.Location = new System.Drawing.Point(93, 122);
+            this.message2.Name = "message2";
+            this.message2.Size = new System.Drawing.Size(0, 16);
+            this.message2.TabIndex = 46;
             // 
             // FormRecuperarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(810, 522);
+            this.Controls.Add(this.message2);
             this.Controls.Add(this.message);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -224,5 +240,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label message;
+        private System.Windows.Forms.Label message2;
     }
 }

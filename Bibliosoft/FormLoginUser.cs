@@ -43,27 +43,33 @@ namespace Bibliosoft
 
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {
-                string query = "SELECT * FROM Usuario WHERE (Correo = @Correo) AND Contrasena = @Contraseña";
+                con.Open();
+                string query = "SELECT nombre, FotoPerfil FROM Usuario WHERE LOWER(RTRIM(Correo)) = LOWER(RTRIM(@Correo)) AND RTRIM(Contrasena) = RTRIM(@Contrasena)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Correo", textBox1.Text);
-                cmd.Parameters.AddWithValue("@Contraseña", hashPassword);
+                cmd.Parameters.AddWithValue("@Contrasena", hashPassword);
 
-                con.Open();
+                
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
-                    string nombre = reader["NombreCompleto"].ToString();
+                    string nombre = reader["nombreCompleto"].ToString();
                     string foto = reader["FotoPerfil"].ToString();
 
                     MessageBox.Show($"Bienvenido {nombre}");
                     // Aquí podrías mostrar la foto en otro formulario principal
+                    Form formusuariosapp = new FormUsuariosApp(nombre, foto);
+                    formusuariosapp.Show();
+
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos");
                 }
                 con.Close();
+
             }
         }
         private void EnviarCorreoRecuperacion(string correoDestino, string enlace)
