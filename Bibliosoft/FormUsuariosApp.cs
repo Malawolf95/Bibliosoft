@@ -27,16 +27,13 @@ namespace Bibliosoft
         {
             lblNombre.Text = nombre;
 
-            if (foto != null)
+            if (!string.IsNullOrEmpty(foto) && File.Exists(foto))
             {
-                using (MemoryStream ms = new MemoryStream(int.Parse(foto)))
-                {
-                    pictureBoxPerfil.Image = Image.FromStream(ms);
-                }
+                pictureBoxPerfil.Image = Image.FromFile(foto);
             }
             else
             {
-                pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943; // una imagen por defecto
+                pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943; // imagen por defecto
             }
         }
     }

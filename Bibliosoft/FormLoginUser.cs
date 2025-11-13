@@ -44,7 +44,7 @@ namespace Bibliosoft
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {
                 con.Open();
-                string query = "SELECT nombre, FotoPerfil FROM Usuario WHERE LOWER(RTRIM(Correo)) = LOWER(RTRIM(@Correo)) AND RTRIM(Contrasena) = RTRIM(@Contrasena)";
+                string query = "SELECT nombreCompleto, FotoPerfil FROM Usuario WHERE LOWER(RTRIM(Correo)) = LOWER(RTRIM(@Correo)) AND RTRIM(Contrasena) = RTRIM(@Contrasena)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Correo", textBox1.Text);
                 cmd.Parameters.AddWithValue("@Contrasena", hashPassword);
@@ -55,11 +55,11 @@ namespace Bibliosoft
                 if (reader.Read())
                 {
                     string nombre = reader["nombreCompleto"].ToString();
-                    string foto = reader["FotoPerfil"].ToString();
+                    string rutaFoto = reader["FotoPerfil"].ToString();
 
                     MessageBox.Show($"Bienvenido {nombre}");
                     // Aquí podrías mostrar la foto en otro formulario principal
-                    Form formusuariosapp = new FormUsuariosApp(nombre, foto);
+                    Form formusuariosapp = new FormUsuariosApp(nombre, rutaFoto);
                     formusuariosapp.Show();
 
                     this.Hide();

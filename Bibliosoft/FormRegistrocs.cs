@@ -58,7 +58,7 @@ namespace Bibliosoft
             string hashPassword = HashPassword(textBox3.Text);
 
             string query = "INSERT INTO Usuario (nombreCompleto,id_usuario,telefono, Correo, Contrasena, FotoPerfil) " +
-                           "VALUES (@nombreCompleto,@id_usuario,@telefono @Correo, @Contrasena, @FotoPerfil)";
+                           "VALUES (@nombreCompleto,@id_usuario,@telefono, @Correo, @Contrasena, @FotoPerfil)";
 
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {

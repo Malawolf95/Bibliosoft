@@ -124,9 +124,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label3.Location = new System.Drawing.Point(119, 332);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.Size = new System.Drawing.Size(103, 19);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Contraaseña: ";
+            this.label3.Text = "Contraseña: ";
             // 
             // label4
             // 
