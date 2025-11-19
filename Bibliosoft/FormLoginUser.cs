@@ -39,17 +39,13 @@ namespace Bibliosoft
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string hashPassword = HashPassword(textBox2.Text);
-
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {
                 con.Open();
                 string query = "SELECT nombreCompleto, FotoPerfil FROM Usuario WHERE LOWER(RTRIM(Correo)) = LOWER(RTRIM(@Correo)) AND RTRIM(Contrasena) = RTRIM(@Contrasena)";
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Correo", textBox1.Text);
-                cmd.Parameters.AddWithValue("@Contrasena", hashPassword);
 
-                
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
@@ -61,7 +57,6 @@ namespace Bibliosoft
                     // Aquí podrías mostrar la foto en otro formulario principal
                     Form formusuariosapp = new FormUsuariosApp(nombre, rutaFoto);
                     formusuariosapp.Show();
-
                     this.Hide();
                 }
                 else
@@ -69,7 +64,6 @@ namespace Bibliosoft
                     MessageBox.Show("Usuario o contraseña incorrectos");
                 }
                 con.Close();
-
             }
         }
         private void EnviarCorreoRecuperacion(string correoDestino, string enlace)
