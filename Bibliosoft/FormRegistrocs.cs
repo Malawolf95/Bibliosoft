@@ -43,6 +43,18 @@ namespace Bibliosoft
 
         private void buttonResistrarse_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox6.Text) || string.IsNullOrWhiteSpace(textBox3.Text) || string.IsNullOrWhiteSpace(textBox4.Text))
+            {
+                
+                    MessageBox.Show("Todos los campos son obligatorios.");
+                    return;
+                
+            }
+
+
+
+            
+
             if (textBox3.Text != textBox4.Text)
             {
                 MessageBox.Show("Las contraseñas no coinciden");
@@ -55,17 +67,22 @@ namespace Bibliosoft
                 return;
             }
 
-            string hashPassword = HashPassword(textBox3.Text);
+            string HashPassword = BCrypt.Net.BCrypt.HashPassword(textBox3.Text);
 
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {
+                con.Open();
+
+                string query = "INSERT INTO Usuario (nombreCompleto,id_usuario,telefono, Correo, Contrasena, FotoPerfil) " +
+                               "VALUES (@nombreCompleto,@id_usuario,@telefono, @Correo, @Contrasena, @FotoPerfil)";
+
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@nombreCompleto", textBox1.Text);
                 cmd.Parameters.AddWithValue("@id_usuario", textBox5.Text);
                 cmd.Parameters.AddWithValue("@telefono", textBox2.Text);
                 cmd.Parameters.AddWithValue("@Correo", textBox6.Text);
-                cmd.Parameters.AddWithValue("@Contrasena", hashPassword);
-                cmd.Parameters.AddWithValue("@FotoPerfil", rutaFoto);
+                cmd.Parameters.AddWithValue("@Contrasena", HashPassword);
+                cmd.Parameters.AddWithValue("@FotoPerfil", rutaFoto ?? "");
 
                 cmd.ExecuteNonQuery();
                 con.Close();

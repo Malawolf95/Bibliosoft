@@ -51,7 +51,7 @@
             this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolverDev.Location = new System.Drawing.Point(-31, 478);
+            this.buttonVolverDev.Location = new System.Drawing.Point(161, 346);
             this.buttonVolverDev.Name = "buttonVolverDev";
             this.buttonVolverDev.Size = new System.Drawing.Size(205, 32);
             this.buttonVolverDev.TabIndex = 11;
@@ -62,9 +62,10 @@
             // labelGestionarL
             // 
             this.labelGestionarL.AutoSize = true;
+            this.labelGestionarL.BackColor = System.Drawing.Color.Transparent;
             this.labelGestionarL.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGestionarL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelGestionarL.Location = new System.Drawing.Point(235, 61);
+            this.labelGestionarL.Location = new System.Drawing.Point(252, 122);
             this.labelGestionarL.Name = "labelGestionarL";
             this.labelGestionarL.Size = new System.Drawing.Size(325, 31);
             this.labelGestionarL.TabIndex = 34;
@@ -73,18 +74,18 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(92, 160);
+            this.label7.Location = new System.Drawing.Point(210, 200);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(156, 19);
             this.label7.TabIndex = 35;
-            this.label7.Text = "Correo electronico: ";
+            this.label7.Text = "Correo electrónico: ";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(271, 159);
+            this.textBox1.Location = new System.Drawing.Point(389, 199);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 22);
             this.textBox1.TabIndex = 36;
@@ -96,7 +97,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(271, 187);
+            this.button3.Location = new System.Drawing.Point(327, 258);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(147, 40);
             this.button3.TabIndex = 37;
@@ -185,7 +186,7 @@
             // message
             // 
             this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(534, 163);
+            this.message.Location = new System.Drawing.Point(594, 224);
             this.message.Name = "message";
             this.message.Size = new System.Drawing.Size(0, 16);
             this.message.TabIndex = 45;
@@ -202,6 +203,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(810, 522);
             this.Controls.Add(this.message2);
             this.Controls.Add(this.message);

@@ -11,11 +11,13 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using System.Security.Cryptography;
+using BCrypt.Net;
 
 namespace Bibliosoft
 {
     public partial class FormLoginUser : Form
     {
+
         string ConexionBD = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=BibliosoftV3;Integrated Security=True";
         public FormLoginUser()
         {
@@ -42,7 +44,10 @@ namespace Bibliosoft
             using (SqlConnection con = new SqlConnection(ConexionBD))
             {
                 con.Open();
-                string query = "SELECT nombreCompleto, FotoPerfil FROM Usuario WHERE LOWER(RTRIM(Correo)) = LOWER(RTRIM(@Correo)) AND RTRIM(Contrasena) = RTRIM(@Contrasena)";
+
+                // 1. OBTENEMOS EL HASH REAL GUARDADO
+                string query = "SELECT nombreCompleto, FotoPerfil, Contrasena FROM Usuario WHERE LOWER(RTRIM(Correo)) = LOWER(RTRIM(@Correo))";
+
                 SqlCommand cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Correo", textBox1.Text);
 
@@ -52,17 +57,29 @@ namespace Bibliosoft
                 {
                     string nombre = reader["nombreCompleto"].ToString();
                     string rutaFoto = reader["FotoPerfil"].ToString();
+                    string hashGuardado = reader["Contrasena"].ToString();
 
-                    MessageBox.Show($"Bienvenido {nombre}");
-                    // Aquí podrías mostrar la foto en otro formulario principal
-                    Form formusuariosapp = new FormUsuariosApp(nombre, rutaFoto);
-                    formusuariosapp.Show();
-                    this.Hide();
+                    // 2. VALIDAMOS LA CONTRASEÑA
+                    bool passOk = BCrypt.Net.BCrypt.Verify(textBox2.Text, hashGuardado);
+
+                    if (passOk)
+                    {
+                        MessageBox.Show($"Bienvenido {nombre}");
+
+                        Form formusuariosapp = new FormUsuariosApp(nombre, rutaFoto);
+                        formusuariosapp.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrectos");
                 }
+
                 con.Close();
             }
         }
@@ -101,6 +118,11 @@ namespace Bibliosoft
             volver.Show();
             Animaciones.SlideIn(volver, "left");
             this.Close();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

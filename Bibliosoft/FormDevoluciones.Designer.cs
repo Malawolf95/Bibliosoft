@@ -159,7 +159,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.numericUpDown1.ForeColor = System.Drawing.Color.Gray;
             this.numericUpDown1.Location = new System.Drawing.Point(196, 145);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(224, 22);

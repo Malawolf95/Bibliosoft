@@ -42,17 +42,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(317, 186);
+            this.textBox1.Location = new System.Drawing.Point(389, 223);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 22);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(317, 244);
+            this.textBox2.Location = new System.Drawing.Point(389, 251);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(192, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -65,7 +66,7 @@
             this.labelGestionarL.AutoSize = true;
             this.labelGestionarL.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGestionarL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.labelGestionarL.Location = new System.Drawing.Point(236, 53);
+            this.labelGestionarL.Location = new System.Drawing.Point(304, 162);
             this.labelGestionarL.Name = "labelGestionarL";
             this.labelGestionarL.Size = new System.Drawing.Size(201, 31);
             this.labelGestionarL.TabIndex = 34;
@@ -78,9 +79,9 @@
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(317, 309);
+            this.button3.Location = new System.Drawing.Point(310, 326);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(147, 49);
+            this.button3.Size = new System.Drawing.Size(195, 49);
             this.button3.TabIndex = 35;
             this.button3.Text = "Iniciar Sesión";
             this.button3.UseVisualStyleBackColor = false;
@@ -89,22 +90,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(141, 189);
+            this.label2.Location = new System.Drawing.Point(213, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 19);
             this.label2.TabIndex = 36;
-            this.label2.Text = "Correo electronico: ";
+            this.label2.Text = "Correo electrónico: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(194, 247);
+            this.label1.Location = new System.Drawing.Point(266, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 19);
             this.label1.TabIndex = 37;
@@ -114,12 +115,12 @@
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Navy;
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(132, 342);
+            this.linkLabel1.Location = new System.Drawing.Point(406, 287);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(165, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(161, 16);
             this.linkLabel1.TabIndex = 38;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Olvidaste su contraseña?";
+            this.linkLabel1.Text = "¿Olvidaste tu contraseña?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // buttonVolverDev
@@ -129,9 +130,9 @@
             this.buttonVolverDev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolverDev.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolverDev.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolverDev.Location = new System.Drawing.Point(-46, 430);
+            this.buttonVolverDev.Location = new System.Drawing.Point(183, 400);
             this.buttonVolverDev.Name = "buttonVolverDev";
-            this.buttonVolverDev.Size = new System.Drawing.Size(205, 32);
+            this.buttonVolverDev.Size = new System.Drawing.Size(119, 32);
             this.buttonVolverDev.TabIndex = 39;
             this.buttonVolverDev.Text = "< Volver ";
             this.buttonVolverDev.UseVisualStyleBackColor = false;
@@ -141,7 +142,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 474);
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(811, 568);
             this.Controls.Add(this.buttonVolverDev);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);

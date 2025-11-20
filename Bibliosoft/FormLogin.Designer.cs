@@ -36,10 +36,10 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(245, 181);
+            this.textBox1.Location = new System.Drawing.Point(257, 165);
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(163, 22);
+            this.textBox1.Size = new System.Drawing.Size(218, 22);
             this.textBox1.TabIndex = 0;
             this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -48,11 +48,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(272, 105);
+            this.label1.Location = new System.Drawing.Point(152, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 24);
+            this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Contraseña:";
             // 
@@ -70,7 +70,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(219, 241);
+            this.button1.Location = new System.Drawing.Point(214, 217);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(222, 41);
             this.button1.TabIndex = 8;

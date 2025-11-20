@@ -57,5 +57,21 @@ namespace Bibliosoft
                 pictureBoxPerfil.Image = Properties.Resources.user_person_profile_avatar_icon_190943__1_;
             }
         }
+
+        private void buttonPrestamos_Click(object sender, EventArgs e)
+        {
+
+            Form PrestarLibro = new PrestarLibroUser();
+            PrestarLibro.Show();
+            this.Hide();
+        }
+
+        private void buttonDevoluciones_Click(object sender, EventArgs e)
+        {
+            Form DevolucionUser = new DevolverLibroUser();
+            DevolucionUser.Show();
+            this.Hide();
+        }
     }
-}
+    }
+
