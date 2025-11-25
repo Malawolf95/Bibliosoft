@@ -45,11 +45,12 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(75, 102);
+            this.dataGridView1.Location = new System.Drawing.Point(222, 202);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(501, 429);
+            this.dataGridView1.Size = new System.Drawing.Size(376, 290);
             this.dataGridView1.TabIndex = 0;
             // 
             // button2
@@ -59,11 +60,12 @@
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(640, 488);
+            this.button2.Location = new System.Drawing.Point(649, 306);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(234, 43);
+            this.button2.Size = new System.Drawing.Size(264, 35);
             this.button2.TabIndex = 39;
-            this.button2.Text = "reservar libro";
+            this.button2.Text = "Reservar libro";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // label3
@@ -72,18 +74,20 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(636, 170);
+            this.label3.Location = new System.Drawing.Point(633, 234);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 19);
+            this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 40;
-            this.label3.Text = "Rervar libro: ";
+            this.label3.Text = "Reservar libro: ";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(746, 169);
+            this.comboBox1.Location = new System.Drawing.Point(754, 234);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(170, 24);
+            this.comboBox1.Size = new System.Drawing.Size(198, 21);
             this.comboBox1.TabIndex = 41;
             // 
             // buttonVolver1
@@ -93,9 +97,10 @@
             this.buttonVolver1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVolver1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonVolver1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonVolver1.Location = new System.Drawing.Point(12, 546);
+            this.buttonVolver1.Location = new System.Drawing.Point(213, 496);
+            this.buttonVolver1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonVolver1.Name = "buttonVolver1";
-            this.buttonVolver1.Size = new System.Drawing.Size(202, 45);
+            this.buttonVolver1.Size = new System.Drawing.Size(152, 37);
             this.buttonVolver1.TabIndex = 42;
             this.buttonVolver1.Text = "< Volver al menú";
             this.buttonVolver1.UseVisualStyleBackColor = false;
@@ -106,9 +111,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(453, 25);
+            this.label1.Location = new System.Drawing.Point(541, 130);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 30);
+            this.label1.Size = new System.Drawing.Size(107, 25);
             this.label1.TabIndex = 43;
             this.label1.Text = "RESERVAS";
             // 
@@ -118,18 +124,20 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(71, 80);
+            this.label2.Location = new System.Drawing.Point(219, 174);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 19);
+            this.label2.Size = new System.Drawing.Size(121, 17);
             this.label2.TabIndex = 44;
             this.label2.Text = "Libros disponibles";
             // 
             // message
             // 
             this.message.AutoSize = true;
-            this.message.Location = new System.Drawing.Point(637, 102);
+            this.message.Location = new System.Drawing.Point(633, 202);
+            this.message.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(406, 16);
+            this.message.Size = new System.Drawing.Size(319, 13);
             this.message.TabIndex = 45;
             this.message.Text = "Libro reservado con exito, puede pasar a la biblioteca a reclamarlo";
             // 
@@ -139,24 +147,28 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(636, 228);
+            this.label4.Location = new System.Drawing.Point(633, 268);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 19);
+            this.label4.Size = new System.Drawing.Size(100, 17);
             this.label4.TabIndex = 46;
             this.label4.Text = "Dias a prestar: ";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(761, 228);
+            this.numericUpDown1.Location = new System.Drawing.Point(754, 268);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(59, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(198, 20);
             this.numericUpDown1.TabIndex = 48;
             // 
             // FormReservas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 603);
+            this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1_2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1118, 696);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.message);
@@ -167,6 +179,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormReservas";
             this.Text = "FormReservas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
