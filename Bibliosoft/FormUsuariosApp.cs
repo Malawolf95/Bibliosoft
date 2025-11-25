@@ -61,7 +61,7 @@ namespace Bibliosoft
         private void buttonPrestamos_Click(object sender, EventArgs e)
         {
 
-            Form PrestarLibro = new FormMiPerfil();
+            Form PrestarLibro = new FormMiPerfil(nombre,foto);
             PrestarLibro.Show();
             this.Hide();
         }

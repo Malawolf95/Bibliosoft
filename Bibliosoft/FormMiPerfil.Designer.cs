@@ -111,6 +111,7 @@
             this.buttonVolverPrest.TabIndex = 25;
             this.buttonVolverPrest.Text = "< Volver al menú";
             this.buttonVolverPrest.UseVisualStyleBackColor = false;
+            this.buttonVolverPrest.Click += new System.EventHandler(this.buttonVolverPrest_Click);
             // 
             // button1
             // 
