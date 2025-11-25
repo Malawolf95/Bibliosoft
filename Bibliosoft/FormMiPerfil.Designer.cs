@@ -1,6 +1,6 @@
 ﻿namespace Bibliosoft
 {
-    partial class PrestarLibroUser
+    partial class FormMiPerfil
     {
         /// <summary>
         /// Required designer variable.
@@ -28,41 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxBooks = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.messageIdBook = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.buttonVolverPrest = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // comboBoxBooks
-            // 
-            this.comboBoxBooks.FormattingEnabled = true;
-            this.comboBoxBooks.Location = new System.Drawing.Point(969, 313);
-            this.comboBoxBooks.Name = "comboBoxBooks";
-            this.comboBoxBooks.Size = new System.Drawing.Size(236, 24);
-            this.comboBoxBooks.TabIndex = 38;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.SteelBlue;
-            this.button3.Location = new System.Drawing.Point(610, 655);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 33);
-            this.button3.TabIndex = 36;
-            this.button3.Text = "Mostrar todos";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // messageIdBook
             // 
@@ -73,25 +49,17 @@
             this.messageIdBook.Size = new System.Drawing.Size(0, 16);
             this.messageIdBook.TabIndex = 35;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.ForeColor = System.Drawing.Color.SlateGray;
-            this.numericUpDown1.Location = new System.Drawing.Point(969, 354);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(236, 22);
-            this.numericUpDown1.TabIndex = 31;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(843, 355);
+            this.label4.Location = new System.Drawing.Point(407, 401);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(111, 19);
+            this.label4.Size = new System.Drawing.Size(154, 19);
             this.label4.TabIndex = 30;
-            this.label4.Text = "Dias a prestar";
+            this.label4.Text = "correo electronico: ";
             // 
             // label3
             // 
@@ -99,11 +67,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(907, 314);
+            this.label3.Location = new System.Drawing.Point(407, 370);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 19);
+            this.label3.Size = new System.Drawing.Size(80, 19);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Libro";
+            this.label3.Text = "Nombre: ";
             // 
             // label2
             // 
@@ -122,23 +90,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(406, 208);
+            this.label1.Location = new System.Drawing.Point(438, 203);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 30);
+            this.label1.Size = new System.Drawing.Size(123, 30);
             this.label1.TabIndex = 27;
-            this.label1.Text = "PRÉSTAMOS";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(239, 288);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(528, 334);
-            this.dataGridView2.TabIndex = 26;
+            this.label1.Text = "MI PERFIL";
             // 
             // buttonVolverPrest
             // 
@@ -164,53 +120,70 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.Image = global::Bibliosoft.Properties.Resources.icons8_literatura_21;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(969, 454);
+            this.button1.Location = new System.Drawing.Point(847, 278);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 43);
             this.button1.TabIndex = 33;
-            this.button1.Text = "Prestar libro";
+            this.button1.Text = "cambiar contraseña";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // PrestarLibroUser
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(256, 278);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 142);
+            this.pictureBox1.TabIndex = 37;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(256, 466);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 43);
+            this.button2.TabIndex = 38;
+            this.button2.Text = "cambiar foto";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // FormMiPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Bibliosoft.Properties.Resources.fondo_bibliosoft_1_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1444, 963);
-            this.Controls.Add(this.comboBoxBooks);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.messageIdBook);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.buttonVolverPrest);
-            this.Name = "PrestarLibroUser";
+            this.Name = "FormMiPerfil";
             this.Text = "PrestarLibroUser";
             this.Load += new System.EventHandler(this.PrestarLibroUser_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox comboBoxBooks;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label messageIdBook;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Button buttonVolverPrest;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

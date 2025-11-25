@@ -33,6 +33,7 @@ namespace Bibliosoft
         {
             books = db.GetBooks();
             dgvBook.DataSource = books;
+            
         }
 
         private void buttonVolverLibros_Click(object sender, EventArgs e)
@@ -167,6 +168,7 @@ namespace Bibliosoft
         }
         
 
+
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -242,5 +244,7 @@ namespace Bibliosoft
         {
 
         }
+
+        
     }
 }

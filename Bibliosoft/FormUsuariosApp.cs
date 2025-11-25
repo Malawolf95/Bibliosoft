@@ -61,15 +61,29 @@ namespace Bibliosoft
         private void buttonPrestamos_Click(object sender, EventArgs e)
         {
 
-            Form PrestarLibro = new PrestarLibroUser();
+            Form PrestarLibro = new FormMiPerfil();
             PrestarLibro.Show();
             this.Hide();
         }
 
         private void buttonDevoluciones_Click(object sender, EventArgs e)
         {
-            Form DevolucionUser = new DevolverLibroUser();
-            DevolucionUser.Show();
+            Form reservar = new FormReservas();
+            reservar.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form historial = new FormHistorial();
+            historial.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form misReservas = new FormMisReservas();
+            misReservas.Show();
             this.Hide();
         }
     }

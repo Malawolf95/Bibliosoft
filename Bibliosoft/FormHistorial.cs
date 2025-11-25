@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Bibliosoft
 {
-    public partial class PrestarLibroUser : Form
+    public partial class FormHistorial : Form
     {
-        public PrestarLibroUser()
+        public FormHistorial()
         {
             InitializeComponent();
-        }
-
-        private void PrestarLibroUser_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

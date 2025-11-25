@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -84,6 +85,7 @@ namespace Bibliosoft
                 }
 
             }
+            
             return book;
         }
         public Libros GetBookById(int idLibro)
@@ -136,6 +138,7 @@ namespace Bibliosoft
                 ));
                 }
             }
+            
             return books;
 
         }

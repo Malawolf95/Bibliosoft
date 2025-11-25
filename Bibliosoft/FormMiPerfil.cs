@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Bibliosoft
 {
-    public partial class DevolverLibroUser : Form
+    public partial class FormMiPerfil : Form
     {
-        public DevolverLibroUser()
+        public FormMiPerfil()
         {
             InitializeComponent();
+        }
+
+        private void PrestarLibroUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

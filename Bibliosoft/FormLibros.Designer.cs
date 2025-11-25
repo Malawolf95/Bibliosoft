@@ -180,6 +180,7 @@
             this.dgvBook.Size = new System.Drawing.Size(525, 333);
             this.dgvBook.TabIndex = 11;
             this.dgvBook.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBook_CellContentClick);
+            
             // 
             // button1
             // 
